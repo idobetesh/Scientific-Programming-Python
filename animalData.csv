@@ -1,0 +1,15 @@
+comment,country,Title,Age,Animal
+textual data,israel,mammal,2,Dog
+textual data,Australia,mammal,5,Cat
+textual data,France,poultry,6,Chicken
+textual data,USA,reptile,1,Snake
+textual data,Australia,amphibian,3,Alligator
+textual data,Germany,mammal,5,Dog
+textual data,,amphibian,7,Turtle
+textual data,France,poultry,2,Chicken
+textual data,Nimbia,mammal,6,Dog
+textual data,,amphibian,8,Turtle
+textual data,israel,mammal,,Cat
+textual data,Germany,reptile,7,Snake
+textual data,Nimbia,poultry,9,Chicken
+textual data,France,poultry,8,Chicken

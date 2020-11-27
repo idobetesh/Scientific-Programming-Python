@@ -1,0 +1,28 @@
+{
+    "groupby": "Animal",
+    "features":[
+        {
+            "Title":{
+                "type":"categorical", 
+                "aggregate":"mode"
+            }
+        },
+        {
+            "Age":{
+                "type":"numerical",
+                "aggregate":"min"
+            }
+        },
+        {
+            "country":{
+                "type":"categorical",
+                "aggregate":"unique"
+            }
+        },
+        {
+            "comment": {
+                "type":"textual"
+            }
+        }
+    ]
+}
