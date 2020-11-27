@@ -356,15 +356,15 @@ class Logics:
 # ---------------------------------------------------------------------------------------------- #
 
 if __name__ == '__main__':
-    s1 = Summary('Animal.csv', 'AnimalFeatures.json')
+    s1 = Summary('Data-Samples/carsData.csv', 'Data-Samples/carFeatures.json')
     # print("specs: ", s1.getSpec())
     # s1.getGroups()
     #print(s1['Ford']['Color']) #- test getitem of class Group
     #print(s1['Ford'])
     i = iter(iter(s1))
     print(type(i))
-    ii = iter(s1['Dog'])
-    groupTest = s1['Dog']
+    ii = iter(s1['Ford'])
+    groupTest = s1['Ford']
     print(groupTest[-3])
     print(next(ii))
     print(next(ii))
