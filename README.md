@@ -1,4 +1,4 @@
-# Scientific-Programming-Python-CSV-Summary
+# Scientific-Programming-Python-CSV-Summary 🐍
 
 Creating a summary file to spec for a given CSV table file. 
 The CSV file contains columns that can be either categorical, textual, or numerical features. Additionally, a JSON file with feature specs is attached. 
