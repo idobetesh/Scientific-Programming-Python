@@ -1,26 +1,25 @@
 {
-    "groupby": "Animal",
+    "groupby": "Country",
     "features": [
         {
-            "Title": {
-                "type": "categorical",
+            "Length": {
+                "type": "numerical",
                 "aggregate": "mode"
             }
         },
         {
-            "Age": {
+            "Income": {
                 "type": "numerical",
                 "aggregate": "min"
             }
         },
         {
-            "country": {
-                "type": "categorical",
-                "aggregate": "unique"
+            "Movie": {
+                "type": "textual"
             }
         },
         {
-            "comment": {
+            "Slogan": {
                 "type": "textual"
             }
         }

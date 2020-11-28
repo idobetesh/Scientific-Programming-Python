@@ -1,6 +1,7 @@
 import csv
 import json
 
+# -----------------------------------------------Group Class----------------------------------------------- #
 class Group:
     def __init__(self, name, featuresAggregate, myFeatures):
         '''The Constructor will receive three arrguments:
@@ -43,7 +44,7 @@ class Group:
         return self
 
     def __next__(self):
-        ''' '''
+        '''Allows you to iterate on the features of the specific group'''
         if self.n < len(self.myFeatures):
             self.n += 1
             feature = list(self.myFeatures.keys())
@@ -55,11 +56,13 @@ class Group:
         else:
             raise StopIteration
 
-# ---------------------------------------------------------------------------------------------- #
+# -----------------------------------------------Summary Class----------------------------------------------- #
 
 class Summary:
-    def __init__(self, csvFile, jsonFile):
-        """init with csvFile as the first parameter and jsonFile as the second"""
+    def __init__(self, csvFile = "", jsonFile = ""):
+        """init with csvFile as the first parameter and jsonFile as the second.
+        The summary constructor works as followed - 
+        Opens json and csv files and then """
         if csvFile == '' or jsonFile == '':
             self.csvFile = ''
             self.jsonFile = ''
@@ -69,6 +72,7 @@ class Summary:
         self.jsonFile = jsonFile
         self.groupsNamesAsSet = set()
         self.groups = []
+        self.featuresDict = {}
 
         with open(jsonFile) as json_file:
             data = json.load(json_file)
@@ -87,7 +91,10 @@ class Summary:
                     featuresAndTypes[i] = feature[i]['type']
                     featuresList.append(i)
                     aggregateList.append(feature[i]['aggregate'])
-        self.featuresDict = dict(zip(featuresList, aggregateList))
+        tmpDict = dict(zip(featuresList, aggregateList))
+        for key in sorted(tmpDict):
+            self.featuresDict[key] = tmpDict[key]
+        
 
 
         # Creating list of dicts from the CSV named - csvDataInList
@@ -157,8 +164,7 @@ class Summary:
                     self.groups.append(Group(name, self.featuresDict, groupValues))
 
     def getGroups(self):
-        for group in self.groups:
-            print(group)
+        return self.groups
 
     def getSpec(self):
         return self.featuresDict
@@ -168,8 +174,6 @@ class Summary:
         header = {self.GroupBy:'(groupby)'}
         for i in self.featuresDict:
             header[i] =  f"({self.featuresDict[i]})"
-
-        print(f"HEADER: {header}") ############## delete! #################
 
         if type(inputDelimiter) == int:
             inputDelimiter = ',' 
@@ -208,14 +212,13 @@ class Summary:
         return self
 
     def __next__(self):
-        #print( len(self.groups))
         if self.n < len(self.groups):
             self.n += 1
             return self.groups[self.n]
         else:
             raise StopIteration
 
-# ---------------------------------------------------------------------------------------------- #
+# -----------------------------------------------Logic Class----------------------------------------------- #
 
 class Logics:
     """ start with {Kilometers: max, Color: mode, Model: unique}  """
@@ -352,25 +355,4 @@ class Logics:
                 counter += 1
 
         return float(mySum / counter)
-
-# ---------------------------------------------------------------------------------------------- #
-
-if __name__ == '__main__':
-    s1 = Summary('Data-Samples/carsData.csv', 'Data-Samples/carFeatures.json')
-    # print("specs: ", s1.getSpec())
-    # s1.getGroups()
-    #print(s1['Ford']['Color']) #- test getitem of class Group
-    #print(s1['Ford'])
-    i = iter(iter(s1))
-    print(type(i))
-    ii = iter(s1['Ford'])
-    groupTest = s1['Ford']
-    print(groupTest[-3])
-    print(next(ii))
-    print(next(ii))
-    print(next(ii))
-
-    s1.saveSummary("data.csv", 1)
-    print(s1)
-
         
