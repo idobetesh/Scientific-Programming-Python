@@ -1,4 +1,4 @@
-from csv_summary_update import Summary
+from csv_summary import Summary
 
 if __name__ == '__main__':
     s1 = Summary('Data-Samples/moviesData.csv', 'Data-Samples/movieFeatures.json')
@@ -11,13 +11,13 @@ if __name__ == '__main__':
     #print(s1['Ford'])
     i = iter(iter(s1))
     print(type(i))
-    ii = iter(s1['Canada'])
-    groupTest = s1['Brazil']
+    ii = iter(s1['110'])
+    groupTest = s1['120']
     print(groupTest[-1])
     print(next(ii))
     print(next(ii)) 
 
-    s1.saveSummary("output_summary.csv", ';')
+    s1.saveSummary('./output_summary.csv')
     print(s1)
 
         

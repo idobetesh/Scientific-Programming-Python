@@ -1,4 +1,7 @@
-Country (groupby);Income (min);Length (mode)
-China;14;100
-Canada;39;110
-Brazil;69;100
+Length (groupby),Country (union),Income (min)
+120,China,25
+100,China;Brazil,14
+80,China,25
+110,Canada;China,24
+90,China,27
+60,Canada;China,39

@@ -1,10 +1,10 @@
 {
-    "groupby": "Country",
+    "groupby": "Length",
     "features": [
         {
-            "Length": {
-                "type": "numerical",
-                "aggregate": "mode"
+            "Country": {
+                "type": "categorial",
+                "aggregate": "union"
             }
         },
         {
