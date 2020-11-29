@@ -1,7 +1,4 @@
-Length (groupby),Country (union),Income (min)
-120,China,25
-100,China;Brazil,14
-80,China,25
-110,Canada;China,24
-90,China,27
-60,Canada;China,39
+Brand (groupby),Color (mode),Kilometers (min),Model (unique)
+Mazda,White,15000,2
+Ford,Red,10000,2
+Nissan,Black,50000,1
