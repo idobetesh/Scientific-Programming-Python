@@ -5,8 +5,7 @@ if __name__ == '__main__':
     # ----------------------------------------Cars--------------------------------------- #
     carsSummary = Summary('Data-Samples/carsData.csv', 'Data-Samples/carFeatures.json')
     print("specs: ", carsSummary.getSpec())
-    print(f"__getitem__:{carsSummary['Ford']['Color']}") 
-    
+    print(f"carsSummary['Nissan']['Color'].__getitem__:{carsSummary['Nissan']['Color']}") 
 
     groups = carsSummary.getGroups()
     for group in groups:
@@ -15,14 +14,16 @@ if __name__ == '__main__':
     i = iter(iter(carsSummary))
     print(type(i))
 
-    ii = iter(carsSummary['Ford'])
     groupTest = carsSummary['Ford']
-    print(groupTest[-1])
+    print(f"by index: {groupTest[-2]}")
+    
+    ii = iter(carsSummary['Ford'])
     print(next(ii))
     print(next(ii))
 
     carsSummary.saveSummary('output_summary.csv')
     print(carsSummary)
+
 
     # --------------------------------------Animals-------------------------------------- #
 

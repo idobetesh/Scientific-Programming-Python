@@ -24,20 +24,21 @@ class Group:
         return retString 
     
     def __getitem__(self,key):
-        ''' Will receive a key(either numerical(positive or negative) or textual(the group name), and returns the value at this index) '''
-        for i, feature in enumerate(self.myFeatures):
-            if type(key) == int:
-                if key < 0:
-                    if key < len(self.myFeatures) * -1:
-                        raise StopIteration
-                    key = key + len(self.myFeatures)
-            if feature == key or i == key:
-                if type(key) == int:
+        '''Will receive a key(either numerical(positive or negative) or textual(the group name), and returns the value at this index)'''
+        if type(key) == int:
+            if key < 0:
+                if key < len(self.myFeatures) * -1:
+                    raise StopIteration
+                key = key + len(self.myFeatures)
+            else:
+                if key > len(self.myFeatures):
+                    raise StopIteration
+
+            for i, feature in enumerate(self.myFeatures):
+                if key == i:
                     return self.myFeatures[feature]
-                elif type(key) == str:
-                    return self.myFeatures[i]
-                else:
-                    return None
+        else:
+            return self.myFeatures[key]
     
     def __iter__(self):
         ''' Initialize the variable n to be -1(for the __next__ function to iterate) '''
