@@ -1,23 +1,33 @@
 from csv_summary import Summary
 
 if __name__ == '__main__':
-    s1 = Summary('Data-Samples/carsData.csv', 'Data-Samples/carFeatures.json')
-    # print("specs: ", s1.getSpec())
-    # s1.getGroups()
-    # print(s1['Ford']['Color']) #- test getitem of class Group
-    groups = s1.getGroups()
+
+    # ----------------------------------------Cars--------------------------------------- #
+    carsSummary = Summary('Data-Samples/carsData.csv', 'Data-Samples/carFeatures.json')
+    print("specs: ", carsSummary.getSpec())
+    print(f"__getitem__:{carsSummary['Ford']['Color']}") 
+    
+
+    groups = carsSummary.getGroups()
     for group in groups:
         print(group)
-    # print(s1['Ford'])
-    i = iter(iter(s1))
+        
+    i = iter(iter(carsSummary))
     print(type(i))
-    # ii = iter(s1['110'])
-    # groupTest = s1['120']
-    ii = iter(s1['Ford'])
-    groupTest = s1['Ford']
+
+    ii = iter(carsSummary['Ford'])
+    groupTest = carsSummary['Ford']
     print(groupTest[-1])
     print(next(ii))
     print(next(ii))
 
-    s1.saveSummary('output_summary.csv')
-    print(s1)
+    carsSummary.saveSummary('output_summary.csv')
+    print(carsSummary)
+
+    # --------------------------------------Animals-------------------------------------- #
+
+    # ii = iter(carsSummary['110'])
+    # groupTest = carsSummary['120']
+
+
+    # --------------------------------------Movies--------------------------------------- #

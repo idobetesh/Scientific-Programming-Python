@@ -26,10 +26,11 @@ class Group:
     def __getitem__(self,key):
         ''' Will receive a key(either numerical(positive or negative) or textual(the group name), and returns the value at this index) '''
         for i, feature in enumerate(self.myFeatures):
-            if key < 0:
-                if key < len(self.myFeatures) * -1:
-                    raise StopIteration
-                key = key + len(self.myFeatures)
+            if type(key) == int:
+                if key < 0:
+                    if key < len(self.myFeatures) * -1:
+                        raise StopIteration
+                    key = key + len(self.myFeatures)
             if feature == key or i == key:
                 if type(key) == int:
                     return self.myFeatures[feature]
