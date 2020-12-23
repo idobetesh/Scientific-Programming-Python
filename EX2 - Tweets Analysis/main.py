@@ -1,5 +1,6 @@
 import numpy as np
 import re
+import datetime as dt
 import csv
 
 web = re.compile(r'(https?:{1}\/{2}(www\.|[a-zA-Z])+\.com)')
@@ -11,12 +12,27 @@ btc = re.compile(r'#bitcoin|#btc')
 def summary(file_path):
     with open(file_path, newline='', encoding='utf-8') as f:
         reader = csv.DictReader(f, delimiter=';', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+        mySet = set()
         for row in reader:
             if btc.search(dict(row)['text'].lower()) is not None:
-                print("===========================", dict(row)['text'])
+                #print("===========================", dict(row)['text'])
+                continue
             if web.search(dict(row)['text']) is not None:
-                print("******************",dict(row)['text'])
+                #print("******************",dict(row)['text'])
+                continue
+            # date_time_str = dict(row)['timestamp']
+            # date_time_obj = dt.datetime.strptime(date_time_str, '%Y-%m-%d %H:%M:%z')
+            tmp = dict(row)['timestamp'][:7]
+            print(tmp)
+            #date_time_obj = dt.datetime.strptime(tmp, '%Y-%m')
+            #mySet.add(date_time_obj.year())
+        print(mySet)
+
             
 
-summary("t.csv")
-# summary("tweets_small_data.csv")
+
+            
+            
+if __name__ == '__main__':
+    #summary("t.csv")
+    summary("tweets_small_data.csv")
