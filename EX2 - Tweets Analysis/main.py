@@ -17,7 +17,10 @@ def summary(file_path):
             if btc.search(dict(row)['text'].lower()) is not None:
                 #print("===========================", dict(row)['text'])
                 continue
-            if web.search(dict(row)['text']) is not None:
+            # if web.search(dict(row)['text']) is not None:
+            tmp =  web.findall(dict(row)['text']) 
+            if tmp:
+                print(tmp[0][0][8:])
                 # print("******************",dict(row)['text'])
                 continue
             # mySet.add(dt.datetime.strptime(dict(row)['timestamp'][:7], '%Y-%m').date())
