@@ -12,7 +12,6 @@ btc = re.compile(r'#bitcoin|#btc')
 def summary(file_path):
     with open(file_path, newline='', encoding='utf-8') as f:
         reader = csv.DictReader(f, delimiter=';', quotechar='"', quoting=csv.QUOTE_MINIMAL)
-        mySet = set()
         for row in reader:
             if btc.search(dict(row)['text'].lower()) is not None:
                 #print("===========================", dict(row)['text'])
@@ -20,13 +19,8 @@ def summary(file_path):
             if web.search(dict(row)['text']) is not None:
                 #print("******************",dict(row)['text'])
                 continue
-            # date_time_str = dict(row)['timestamp']
-            # date_time_obj = dt.datetime.strptime(date_time_str, '%Y-%m-%d %H:%M:%z')
             tmp = dict(row)['timestamp'][:7]
             print(tmp)
-            #date_time_obj = dt.datetime.strptime(tmp, '%Y-%m')
-            #mySet.add(date_time_obj.year())
-        print(mySet)
 
             
 
