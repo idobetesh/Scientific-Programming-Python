@@ -1,2 +1,2 @@
 libraries to install:
-pip install pandas 🐼🐼🐼
+pip install pandas 🐼
