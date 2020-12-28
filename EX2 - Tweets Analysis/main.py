@@ -6,6 +6,8 @@ import csv
 web = re.compile(r'(https?:{1}\/{2}(www\.|([a-zA-Z])+)(\.com))')
 # https?:{1}\/{2}(www\.|[a-zA-Z]+)+\.com
 
+# (https?:\/\/([www]?\.|[a-zA-Z0-9]+\.\w+))
+
 btc = re.compile(r'#bitcoin|#btc')
 
 
