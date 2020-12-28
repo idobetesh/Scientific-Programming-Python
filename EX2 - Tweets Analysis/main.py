@@ -1,47 +1,93 @@
-import numpy as np
 import re
-import datetime as dt
 import csv
+import pandas as pd
+import time
 
-web = re.compile(r'(https?:{1}\/{2}(www\.|([a-zA-Z])+)(\.com))')
-# https?:{1}\/{2}(www\.|[a-zA-Z]+)+\.com
+class TweetsSummary:
+    def __init__(self):
+        self.data = {}
+        #tweets.csv => { YYYY-MM: { "mention": [], "hashtag": [], "website": [] } }
+                     # { YYYY-MM: { "mention": [], "hashtag": [], "website": [] } }
+                     # { YYYY-MM: { "mention": [], "hashtag": [], "website": [] } } ...
+        
 
-# (https?:\/\/([www]?\.|[a-zA-Z0-9]+\.\w+))
+    def getTweetsSummary(self):
+        ''' This function opens csv file named tweet.csv and creates a data set that looks as mention above.
+            It takes the date from the 'timestamp' from each row and starts to go over the 'text' colunm 
+            and search using regex expressions tofind the correct patterns
+            then it adds the data to the relevant list in the current date dict.
+            At the end it calls the findMostFreqAndGenCsv function '''
 
-btc = re.compile(r'#bitcoin|#btc')
+        with open('tweets.csv', 'r', newline='', encoding='utf-8') as source_file:
+            tweetsReader = csv.DictReader(source_file, delimiter=';', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+
+            for row in tweetsReader:
+                date = row['timestamp'][:7] #YYYY-MM
+                text = row['text']
+
+                if text == "":
+                    continue
+
+                if date not in self.data:
+                    self.data[date] = {"hashtag": [], "website": [], "mention": []}
+                else:
+                    hashtags = re.finditer(r"#(?!bitcoin|btc)[^\s±§!@#$%^&*()=+.\/,:;\[\]\{\}'\"?><|\\]+", text, re.IGNORECASE)
+                    tmpHash = []
+                    for tag in hashtags:
+                        tmpHash.append(tag.group())
+                    self.data[date]["hashtag"].extend(tmpHash)
+
+                    tmpWeb = []
+                    websites = re.finditer(r'https?:\/\/([A-za-z0-9]+\.[\w\-]+\.*[\w\-]*)', text)
+                    for web in websites:
+                        tmpWeb.append(web.group(1))
+                    self.data[date]["website"].extend(tmpWeb)
+                    
+                    tmpMen = []
+                    mentions = re.finditer(r'@([\w\-]+)', text)  
+                    for men in mentions:
+                        tmpMen.append(men.group())
+                    self.data[date]["mention"].extend(tmpMen)
+                        
+            self.findMostFreqAndGenCsv()
 
 
-def summary(csv_file):
-    # data = np.genfromtxt(csv_file, delimiter=';', encoding='utf-8')
-    with open(csv_file, 'r', newline='', encoding='utf-8') as f:
-        reader = list(csv.reader(f, delimiter=';', quotechar='"', quoting=csv.QUOTE_MINIMAL))
-        reader = np.array(reader[1:], dtype=np.str)
-        print(reader.shape)
+    def findMostFreqAndGenCsv(self):
+        ''' This function finds the most frequent hashtag/website/mention for every month in tweets.csv
+         and generates output csv of the result using the Pandas mode functions.'''
 
-        mySet = set()
-        myDict = {}
-        for row in reader:
-            if btc.search(dict(row)['text'].lower()) is not None:
-                #print("===========================", dict(row)['text'])
-                continue
-            # if web.search(dict(row)['text']) is not None:
-            tmp =  web.findall(dict(row)['text']) 
-            if tmp:
-                t = f"www.{tmp[0][1]}.com"
-                myDict[t] = myDict.get(t, 0) + 1
-                print(t)
-                # print("******************",dict(row)['text'])
-                continue
-            # mySet.add(dt.datetime.strptime(dict(row)['timestamp'][:7], '%Y-%m').date())
-            mySet.add(dict(row)['timestamp'][:7])
-        a = list(mySet)
-        a = sorted(a)
-        print(a)
-        print(myDict)
+        with open("tweet-data.csv", 'w', newline='', encoding='utf-8') as output_file:
+            header = ["Month", "Hashtag", "Mention", "Website"]
+            writer = csv.DictWriter(output_file, header)
+            writer.writeheader()
+            
+            for date in sorted(self.data):
+                final = {}
+                final["Month"] = date
+                
+                if self.data[date]["hashtag"]:
+                    final["Hashtag"] = pd.Series.mode(self.data[date]["hashtag"]).iloc[0]
+                else:
+                    final["Hashtag"] = "None"
+                    
+                if self.data[date]["mention"]:
+                    final["Mention"] = pd.Series.mode(self.data[date]["mention"]).iloc[0]
+                else:
+                    final["Mention"] = "None"
+
+                if self.data[date]["website"]:
+                    final["Website"] = pd.Series.mode(self.data[date]["website"]).iloc[0]
+                else:
+                    final["Website"] = "None"
+                    
+                writer.writerow(final)
 
 
 
-if __name__ == '__main__':
-    summary("t.csv")
-    # summary("tweets_small_data.csv")
-    # summary("tweets.csv")
+if __name__ == "__main__":
+    tweets_obj = TweetsSummary()
+    start = time.time()
+    tweets_obj.getTweetsSummary()
+    print(f"{(time.time() - start)} seconds")
+
+
