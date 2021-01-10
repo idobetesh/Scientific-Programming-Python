@@ -28,6 +28,7 @@ def task1():
     print(data)
     print(f"describe():\n{data.describe()}")
     
+    # 1.8
     plt.figure("Task 1 - Price Histogram")
     data["price"].hist(color="orange")
     plt.xlabel("Count")
