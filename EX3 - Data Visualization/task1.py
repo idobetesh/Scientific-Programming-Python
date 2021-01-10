@@ -1,7 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-# ======================== Task ======================== #
+# ======================== Task 1 ======================== #
 
 def task1():
     # 1.1
@@ -27,10 +27,12 @@ def task1():
     # 1.7
     print(data)
     print(f"describe():\n{data.describe()}")
-
-    plt.plot(data["price"], color = "orange")
-    plt.xlabel("time")
-    plt.ylabel("Price", color="blue")
+    
+    plt.figure("Task 1 - Price Histogram")
+    data["price"].hist(color="orange")
+    plt.xlabel("Count")
+    plt.ylabel("Price")
+    plt.tight_layout()
     plt.show()
 
 
