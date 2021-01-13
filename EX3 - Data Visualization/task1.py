@@ -29,12 +29,12 @@ def task1():
     print(f"describe():\n{data.describe()}")
     
     # 1.8
-    plt.figure("Task 1 - Price Histogram")
-    data["price"].hist(color="orange")
-    plt.xlabel("Count")
-    plt.ylabel("Price")
-    plt.tight_layout()
-    plt.show()
+    # plt.figure("Task 1 - Price Histogram")
+    # data["price"].hist(color="orange")
+    # plt.xlabel("Count")
+    # plt.ylabel("Price")
+    # plt.tight_layout()
+    # plt.show()
 
 
 if __name__ == "__main__":
