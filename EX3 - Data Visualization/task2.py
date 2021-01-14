@@ -8,17 +8,17 @@ import seaborn as sb
 def task2():
     # load data from csv
     data = pd.read_csv("./Data/mobile_price_1.csv")
-    # corr = data.corr()
+    corr = data.corr()
     # print(corr)
 
     # 2.1
-    #Correlation Heatmap Numerical values
-    #mask = np.triu(np.ones_like(corr, dtype=bool))
-    # f, ax = plt.subplots(figsize=(8, 6))
-    # ax.set_title("Task2 - Correlation Heatmap Numerical values")
-    # cmap = sb.diverging_palette(200, 10, as_cmap=True)
-    # sb.heatmap(corr, mask=mask, cmap=cmap, center=0, square=True, linewidths=.5)
-    # plt.show()
+    # Correlation Heatmap Numerical values
+    mask = np.triu(np.ones_like(corr, dtype=bool))
+    f, ax = plt.subplots(figsize=(8, 6))
+    ax.set_title("Task2 - Correlation Heatmap Numerical values")
+    cmap = sb.diverging_palette(200, 10, as_cmap=True)
+    sb.heatmap(corr, mask=mask, cmap="YlGnBu", center=0, square=True, linewidths=.5)
+    plt.show()
 
     # 2.2
     # Features correlated the most with the device price are:
@@ -73,7 +73,6 @@ def task2():
     # plt.xlabel('gen')
     # plt.ylabel('price')
     # plt.show()
-
 
     # 2.5
     #pivot table
