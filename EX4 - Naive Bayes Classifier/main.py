@@ -1,9 +1,9 @@
-import pandas as pd
 import numpy as np
-from sklearn.naive_bayes import GaussianNB
-from sklearn import metrics
+import pandas as pd
 import seaborn as sb
 import matplotlib.pyplot as plt
+from sklearn import metrics
+from sklearn.naive_bayes import GaussianNB
 from sklearn.model_selection import train_test_split
 
 penguins = pd.read_csv('./Data/penguins.csv')
@@ -39,3 +39,10 @@ print(f'score: {model.score(X_test, y_test)}')
 
 print(f'test[y]:\n{y_test[:10]}')
 print(f'predict: {model.predict(X_test[:10])}')
+
+print(penguins)
+penguins_sb = sb.load_dataset(penguins)
+sb.FacetGrid(penguins_sb, hue="species", size=7).map(plt.scatter,"2", "1").add_legend()
+plt.title('Scatter plot')
+plt.show()
+# df1 = penguins[["1_sepal_length", "2_sepal_width",'species']]
