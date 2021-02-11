@@ -40,7 +40,6 @@ Male,Yes,56.0,Yes,Artist,1.0,average,2.0,6.0,8.466,-0.717,10.577,11.84,C
 Female,No,47.0,Yes,Artist,4.0,low,1.0,6.0,8.848,1.323,6.738,3.656,B
 Female,No,22.0,No,Healthcare,0.0,average,2.0,6.0,10.324,0.992,7.969,-3.01,D
 Female,No,40.0,Yes,Artist,14.0,average,3.0,6.0,4.586,2.68,6.248,5.511,A
-Female,Yes,49.0,Yes,Artist,1.0,low,2.0,0.0,10.835,13.175,7.61,5.932,C
 Male,Yes,40.0,No,Engineer,8.0,low,1.0,6.0,6.767,4.562,5.323,1.442,A
 Female,Yes,79.0,No,Lawyer,1.0,high,2.0,6.0,4.312,5.074,11.035,3.649,A
 Male,Yes,41.0,Yes,Artist,0.0,average,4.0,4.0,-0.02,1.409,6.702,0.087,B
@@ -152,7 +151,6 @@ Male,Yes,35.0,Yes,Artist,3.0,average,3.0,6.0,5.717,5.026,6.774,11.074,C
 Female,No,49.0,Yes,Artist,1.0,low,1.0,6.0,16.741,5.038,13.161,9.597,C
 Female,No,25.0,Yes,Healthcare,1.0,low,5.0,6.0,2.87,0.371,2.339,4.375,D
 Male,Yes,37.0,No,Executive,0.0,average,5.0,6.0,3.743,3.387,6.258,3.511,A
-Female,No,32.0,No,Healthcare,1.0,low,5.0,0.0,13.725,9.029,9.038,8.43,C
 Male,Yes,60.0,Yes,Doctor,0.0,average,2.0,6.0,19.992,4.298,9.299,14.824,C
 Female,Yes,45.0,Yes,Artist,5.0,average,3.0,6.0,11.46,1.951,12.842,10.679,C
 Female,Yes,49.0,Yes,Homemaker,9.0,average,3.0,6.0,12.772,5.018,2.495,17.539,C
@@ -175,7 +173,6 @@ Female,No,29.0,Yes,Artist,1.0,low,1.0,4.0,5.242,4.701,3.287,-3.849,B
 Male,Yes,40.0,Yes,Artist,4.0,average,4.0,6.0,18.093,0.144,7.145,12.193,C
 Female,No,40.0,Yes,Artist,1.0,low,1.0,6.0,3.595,8.527,2.051,3.256,A
 Male,Yes,38.0,Yes,Artist,1.0,low,2.0,6.0,14.25,10.904,18.491,4.635,C
-Female,Yes,85.0,No,Lawyer,1.0,low,3.0,0.0,4.947,5.614,3.64,2.976,A
 Female,No,21.0,No,Doctor,1.0,low,3.0,7.0,6.506,7.318,1.362,5.638,A
 Female,Yes,41.0,No,Engineer,4.0,average,2.0,6.0,11.454,5.764,5.692,0.959,D
 Male,Yes,40.0,Yes,Artist,0.0,low,2.0,6.0,0.202,1.417,1.373,3.248,B
@@ -213,9 +210,7 @@ Male,No,25.0,Yes,Healthcare,1.0,low,4.0,4.0,4.598,4.304,3.257,3.865,B
 Male,No,40.0,No,Marketing,1.0,low,1.0,4.0,10.045,3.646,5.551,6.417,D
 Female,Yes,25.0,Yes,Healthcare,1.0,low,2.0,6.0,7.474,8.579,5.185,8.062,D
 Female,Yes,74.0,No,Lawyer,1.0,high,2.0,6.0,5.213,5.588,6.656,8.679,D
-Female,No,23.0,No,Healthcare,0.0,average,4.0,0.0,11.118,6.028,6.527,4.649,D
 Female,Yes,67.0,Yes,Lawyer,0.0,high,2.0,6.0,8.724,4.709,1.546,2.544,B
-Male,No,21.0,No,Healthcare,0.0,low,3.0,0.0,5.336,7.059,5.838,0.393,D
 Female,No,38.0,Yes,Artist,9.0,low,1.0,3.0,9.258,7.704,9.411,1.738,A
 Male,No,28.0,No,Healthcare,0.0,average,4.0,2.0,5.904,-1.298,15.489,5.484,C
 Female,No,32.0,No,Healthcare,1.0,low,5.0,7.0,3.549,1.977,-0.871,2.908,B
@@ -511,13 +506,11 @@ Female,Yes,43.0,No,Artist,0.0,average,3.0,4.0,7.158,6.5,2.752,1.919,A
 Male,No,27.0,Yes,Healthcare,8.0,low,1.0,3.0,8.835,5.664,10.481,13.492,C
 Female,Yes,46.0,No,Artist,0.0,average,4.0,3.0,10.027,-0.617,7.281,7.129,C
 Male,Yes,43.0,No,Artist,1.0,low,2.0,6.0,3.83,6.082,1.705,-2.583,B
-Male,Yes,69.0,Yes,Lawyer,1.0,low,1.0,0.0,5.728,8.438,5.442,3.358,A
 Male,Yes,28.0,No,Entertainment,8.0,average,4.0,7.0,10.323,0.768,2.149,0.311,D
 Male,No,43.0,Yes,Entertainment,9.0,low,1.0,6.0,9.925,7.27,4.562,5.634,D
 Female,No,27.0,No,Healthcare,1.0,low,5.0,7.0,10.815,7.307,5.297,5.316,D
 Female,No,28.0,Yes,Healthcare,1.0,average,3.0,6.0,7.627,-0.156,4.498,4.681,D
 Male,No,33.0,No,Artist,1.0,low,4.0,6.0,4.158,6.72,5.763,-1.756,D
-Female,No,30.0,No,Engineer,0.0,low,1.0,0.0,3.204,1.302,3.868,-2.685,B
 Male,No,58.0,No,Healthcare,4.0,low,2.0,6.0,7.528,4.819,8.951,5.919,D
 Female,No,38.0,Yes,Engineer,8.0,average,4.0,6.0,3.288,3.836,7.102,2.691,A
 Female,No,31.0,Yes,Artist,1.0,low,4.0,6.0,4.154,4.486,1.982,-0.859,D
@@ -715,7 +708,6 @@ Female,No,37.0,No,Homemaker,1.0,low,1.0,1.0,13.309,6.17,3.746,5.179,D
 Female,Yes,36.0,No,Artist,2.0,average,4.0,3.0,10.05,10.173,1.691,10.939,C
 Male,No,25.0,Yes,Entertainment,2.0,low,3.0,1.0,13.643,4.964,-1.824,6.81,D
 Female,Yes,45.0,Yes,Artist,1.0,average,2.0,6.0,2.045,2.352,0.517,0.489,B
-Male,Yes,72.0,Yes,Homemaker,9.0,low,3.0,0.0,2.649,6.133,5.66,3.078,A
 Male,No,35.0,Yes,Entertainment,1.0,low,3.0,3.0,7.657,6.876,5.081,5.665,A
 Male,Yes,47.0,No,Entertainment,4.0,average,3.0,6.0,1.423,-0.521,1.043,0.626,B
 Male,No,20.0,No,Healthcare,7.0,low,3.0,6.0,17.458,5.5,-2.169,-0.679,D
@@ -823,7 +815,6 @@ Male,No,22.0,No,Marketing,0.0,low,3.0,4.0,1.406,1.113,-0.049,1.476,D
 Male,Yes,27.0,Yes,Homemaker,9.0,low,3.0,6.0,7.779,-2.953,5.778,5.128,D
 Female,No,28.0,No,Homemaker,8.0,low,3.0,6.0,6.377,9.246,1.145,4.752,D
 Male,Yes,59.0,No,Engineer,1.0,average,4.0,6.0,4.306,4.534,1.027,0.207,B
-Female,Yes,57.0,Yes,Artist,1.0,average,3.0,0.0,19.582,1.878,7.411,7.235,C
 Male,No,25.0,Yes,Healthcare,1.0,low,4.0,6.0,11.772,5.274,9.721,2.524,D
 Female,Yes,40.0,No,Engineer,0.0,low,3.0,6.0,6.165,6.719,7.725,2.69,A
 Female,Yes,40.0,Yes,Artist,1.0,low,2.0,6.0,9.056,6.527,3.771,1.994,A
@@ -1249,7 +1240,6 @@ Female,No,20.0,No,Marketing,1.0,low,3.0,4.0,4.063,2.829,2.988,4.549,D
 Male,Yes,50.0,Yes,Artist,0.0,low,2.0,6.0,1.786,6.965,1.659,-2.226,B
 Female,No,65.0,No,Lawyer,1.0,low,1.0,6.0,0.865,12.028,12.328,4.029,D
 Female,Yes,78.0,Yes,Lawyer,3.0,average,3.0,6.0,10.049,11.782,11.213,5.722,C
-Female,Yes,45.0,Yes,Artist,1.0,average,3.0,0.0,2.84,7.008,7.532,1.956,B
 Male,Yes,29.0,No,Healthcare,1.0,low,4.0,4.0,4.32,5.211,5.286,0.795,A
 Male,No,25.0,No,Healthcare,0.0,low,3.0,4.0,6.025,2.973,1.761,-1.5,B
 Female,Yes,40.0,No,Doctor,1.0,average,5.0,3.0,7.034,7.095,5.306,6.296,A
@@ -1361,7 +1351,6 @@ Male,Yes,52.0,Yes,Artist,1.0,average,4.0,6.0,7.283,4.819,6.251,7.111,A
 Female,Yes,49.0,Yes,Artist,7.0,average,4.0,6.0,2.965,3.011,9.848,4.05,B
 Male,No,62.0,No,Healthcare,8.0,low,1.0,3.0,12.599,9.254,8.367,8.023,C
 Female,Yes,55.0,No,Engineer,1.0,average,7.0,6.0,5.871,4.458,7.614,9.352,A
-Male,No,27.0,No,Healthcare,1.0,low,3.0,0.0,-0.905,3.172,5.51,-0.41,B
 Female,Yes,40.0,Yes,Artist,0.0,low,1.0,3.0,4.917,3.621,2.487,4.183,B
 Female,Yes,31.0,No,Homemaker,8.0,average,2.0,6.0,11.277,5.983,12.379,6.4,D
 Male,No,33.0,Yes,Healthcare,0.0,low,5.0,6.0,-2.445,6.356,9.145,5.974,D
@@ -1713,7 +1702,6 @@ Female,Yes,87.0,Yes,Lawyer,1.0,high,2.0,6.0,2.762,3.865,4.158,3.589,A
 Male,Yes,40.0,No,Entertainment,6.0,average,3.0,3.0,1.102,5.732,2.428,4.326,B
 Male,No,32.0,Yes,Marketing,8.0,low,1.0,6.0,10.362,4.199,-2.467,6.344,D
 Male,Yes,40.0,No,Executive,7.0,low,4.0,6.0,7.348,6.178,6.949,2.59,A
-Female,Yes,58.0,Yes,Artist,0.0,high,3.0,0.0,1.289,4.329,-0.232,0.771,B
 Male,No,19.0,No,Healthcare,1.0,low,5.0,4.0,7.56,-4.426,1.621,1.346,D
 Female,No,31.0,Yes,Marketing,0.0,low,9.0,7.0,6.372,5.79,13.768,-5.321,D
 Male,No,31.0,No,Healthcare,1.0,low,4.0,6.0,-1.174,3.49,4.989,-1.18,B
@@ -1850,7 +1838,6 @@ Female,No,33.0,Yes,Entertainment,1.0,low,4.0,6.0,1.156,3.93,7.758,7.631,B
 Male,No,30.0,No,Engineer,9.0,low,3.0,4.0,15.295,3.473,2.931,1.562,D
 Male,Yes,85.0,Yes,Executive,1.0,high,2.0,6.0,12.771,11.128,4.217,0.821,D
 Female,Yes,46.0,Yes,Artist,1.0,high,3.0,6.0,10.057,10.331,5.124,10.355,C
-Male,Yes,48.0,Yes,Doctor,1.0,low,2.0,0.0,4.38,5.096,9.419,3.131,A
 Male,Yes,80.0,Yes,Lawyer,1.0,high,2.0,6.0,-0.713,3.284,5.193,-2.255,B
 Male,No,33.0,Yes,Artist,8.0,low,3.0,5.0,5.792,6.21,3.72,3.515,A
 Female,Yes,40.0,Yes,Artist,4.0,high,7.0,6.0,7.109,8.969,3.314,14.542,C
@@ -1947,7 +1934,6 @@ Male,No,32.0,Yes,Entertainment,1.0,low,1.0,6.0,6.97,2.241,6.453,-0.279,A
 Male,Yes,43.0,No,Marketing,1.0,low,2.0,7.0,13.872,-4.749,7.719,7.974,D
 Female,Yes,55.0,No,Engineer,3.0,average,2.0,6.0,6.198,9.086,0.344,-0.41,B
 Female,Yes,47.0,Yes,Artist,0.0,average,3.0,6.0,17.796,-0.078,11.211,9.613,C
-Female,Yes,73.0,No,Engineer,1.0,low,3.0,0.0,4.715,6.966,6.571,4.019,A
 Male,No,39.0,Yes,Artist,1.0,low,1.0,6.0,13.034,13.02,6.819,5.176,C
 Male,No,22.0,No,Healthcare,0.0,low,4.0,6.0,9.041,9.861,5.902,8.901,D
 Female,No,31.0,No,Healthcare,0.0,low,7.0,6.0,4.887,3.856,-0.628,0.126,B
@@ -1966,7 +1952,6 @@ Male,Yes,40.0,Yes,Artist,0.0,average,5.0,3.0,7.292,9.073,8.623,12.566,C
 Male,Yes,81.0,Yes,Lawyer,1.0,low,1.0,6.0,8.78,3.768,3.016,2.958,A
 Female,Yes,71.0,No,Lawyer,1.0,high,2.0,6.0,1.664,6.077,8.456,1.687,B
 Female,No,31.0,No,Healthcare,10.0,low,2.0,3.0,5.309,5.225,11.294,15.96,C
-Male,Yes,41.0,Yes,Entertainment,9.0,average,4.0,0.0,7.148,2.831,3.423,2.236,A
 Male,Yes,35.0,No,Homemaker,1.0,average,3.0,6.0,1.225,3.761,1.235,0.636,B
 Female,No,52.0,Yes,Artist,6.0,low,1.0,6.0,4.511,4.321,6.104,3.16,A
 Male,No,19.0,No,Healthcare,1.0,low,4.0,3.0,8.977,12.131,8.681,1.842,D
@@ -2222,7 +2207,6 @@ Male,Yes,80.0,No,Lawyer,0.0,low,1.0,4.0,4.59,8.149,1.599,2.295,B
 Female,Yes,19.0,No,Artist,1.0,high,2.0,4.0,2.106,2.3,6.803,3.149,D
 Male,No,33.0,No,Entertainment,1.0,average,1.0,6.0,11.544,8.238,4.689,9.68,D
 Male,Yes,48.0,Yes,Entertainment,1.0,average,6.0,6.0,12.809,12.403,11.188,8.062,C
-Female,No,33.0,No,Healthcare,8.0,low,3.0,0.0,10.9,3.744,7.967,-1.135,D
 Female,No,33.0,Yes,Engineer,0.0,low,3.0,1.0,13.55,9.095,7.679,8.479,D
 Female,No,31.0,No,Healthcare,1.0,low,4.0,6.0,12.747,3.863,5.695,6.729,C
 Female,Yes,48.0,Yes,Artist,1.0,average,2.0,6.0,15.485,2.258,10.58,5.98,C
@@ -2266,7 +2250,6 @@ Male,Yes,53.0,Yes,Executive,1.0,high,2.0,6.0,16.653,8.896,10.035,10.019,C
 Female,Yes,40.0,Yes,Engineer,1.0,average,7.0,6.0,7.03,4.465,2.657,7.6,A
 Male,Yes,62.0,Yes,Artist,0.0,average,9.0,3.0,12.332,4.389,16.389,5.939,C
 Male,No,21.0,No,Healthcare,1.0,low,5.0,2.0,13.607,3.115,2.661,-0.974,D
-Male,Yes,40.0,Yes,Entertainment,1.0,average,2.0,0.0,3.755,6.248,4.099,3.606,A
 Male,No,27.0,No,Healthcare,1.0,low,3.0,3.0,5.068,7.262,9.175,5.71,A
 Female,Yes,84.0,No,Lawyer,0.0,high,2.0,6.0,4.778,6.949,-1.616,1.606,B
 Male,No,26.0,No,Doctor,4.0,low,3.0,6.0,15.284,7.155,4.23,7.042,D
@@ -2348,7 +2331,6 @@ Male,No,42.0,Yes,Entertainment,1.0,low,1.0,7.0,7.998,2.379,7.858,5.292,A
 Male,Yes,35.0,Yes,Doctor,1.0,average,3.0,4.0,8.016,11.326,0.866,2.515,D
 Female,Yes,42.0,Yes,Healthcare,9.0,average,2.0,6.0,16.597,5.013,2.128,4.472,D
 Female,No,33.0,No,Homemaker,9.0,low,1.0,6.0,16.29,5.523,-1.475,3.274,D
-Female,Yes,35.0,No,Engineer,1.0,high,2.0,0.0,10.624,7.493,6.801,7.047,D
 Female,Yes,59.0,Yes,Artist,0.0,average,5.0,6.0,10.491,-0.331,12.001,9.889,C
 Male,Yes,70.0,Yes,Artist,1.0,low,1.0,6.0,2.643,3.234,-0.118,-2.457,B
 Male,Yes,53.0,No,Entertainment,1.0,low,1.0,6.0,5.915,6.363,4.621,2.032,A
@@ -2386,7 +2368,6 @@ Female,Yes,37.0,Yes,Artist,1.0,average,2.0,6.0,4.879,8.8,6.197,11.9,C
 Male,Yes,49.0,Yes,Artist,0.0,average,2.0,6.0,16.172,9.05,4.633,1.428,C
 Female,Yes,38.0,Yes,Engineer,1.0,low,2.0,6.0,10.655,7.253,14.205,9.666,C
 Female,Yes,65.0,Yes,Artist,0.0,average,2.0,6.0,14.348,6.498,13.903,12.956,C
-Female,Yes,48.0,No,Engineer,0.0,average,5.0,0.0,13.146,6.915,13.631,14.745,C
 Male,Yes,52.0,Yes,Entertainment,1.0,low,4.0,2.0,15.402,7.016,7.689,7.102,C
 Male,Yes,73.0,Yes,Lawyer,2.0,low,1.0,6.0,10.737,5.183,3.817,13.33,D
 Female,No,48.0,Yes,Engineer,1.0,low,1.0,6.0,8.673,5.381,7.237,-2.488,B
@@ -2410,7 +2391,6 @@ Female,No,37.0,Yes,Doctor,0.0,low,3.0,6.0,4.705,6.465,6.34,4.156,A
 Male,No,27.0,No,Healthcare,3.0,low,4.0,6.0,10.26,4.366,6.578,7.862,D
 Female,Yes,32.0,Yes,Homemaker,4.0,high,2.0,3.0,4.322,7.038,4.04,1.16,B
 Male,Yes,36.0,No,Executive,7.0,high,4.0,6.0,5.733,6.856,9.902,7.443,A
-Female,No,28.0,Yes,Homemaker,11.0,low,1.0,0.0,16.792,9.521,6.859,3.273,D
 Male,Yes,72.0,No,Entertainment,0.0,average,3.0,1.0,9.344,3.505,8.702,11.825,C
 Male,No,18.0,No,Entertainment,1.0,low,4.0,6.0,13.574,7.332,1.2,1.767,D
 Female,No,36.0,Yes,Artist,1.0,low,1.0,4.0,4.007,5.668,3.562,2.977,B
@@ -2442,7 +2422,6 @@ Male,Yes,39.0,No,Artist,1.0,low,2.0,4.0,3.348,6.631,5.354,4.057,A
 Female,Yes,81.0,Yes,Lawyer,8.0,high,2.0,6.0,12.362,0.955,14.917,14.062,C
 Male,No,43.0,Yes,Doctor,1.0,low,3.0,6.0,7.451,3.192,5.461,2.005,A
 Male,Yes,66.0,Yes,Artist,1.0,high,2.0,6.0,4.227,-1.281,2.305,-0.03,B
-Female,No,53.0,Yes,Artist,0.0,low,2.0,0.0,2.412,4.667,6.968,3.293,A
 Female,No,29.0,Yes,Artist,12.0,low,1.0,6.0,6.768,8.416,4.422,3.423,A
 Female,Yes,86.0,Yes,Lawyer,0.0,high,2.0,6.0,18.678,2.936,5.281,8.101,C
 Male,Yes,70.0,Yes,Artist,1.0,average,3.0,6.0,14.037,9.322,7.166,4.573,C
@@ -2532,10 +2511,8 @@ Male,No,29.0,No,Engineer,0.0,low,5.0,3.0,7.25,4.917,9.545,3.026,A
 Female,Yes,37.0,Yes,Artist,5.0,low,2.0,6.0,11.055,12.469,6.779,7.018,D
 Female,Yes,75.0,Yes,Lawyer,2.0,high,4.0,6.0,10.755,6.027,7.907,-0.862,B
 Male,No,19.0,No,Entertainment,0.0,low,6.0,4.0,2.144,3.176,7.199,4.016,A
-Male,No,22.0,No,Healthcare,1.0,average,5.0,0.0,8.146,6.498,9.944,2.726,D
 Female,Yes,28.0,Yes,Doctor,0.0,average,2.0,2.0,4.525,6.36,7.259,1.966,A
 Male,Yes,45.0,Yes,Artist,0.0,average,4.0,6.0,0.722,7.022,2.434,2.778,B
-Male,Yes,51.0,Yes,Entertainment,0.0,low,3.0,0.0,4.698,1.391,3.321,2.893,D
 Male,No,40.0,No,Entertainment,1.0,low,1.0,4.0,3.818,3.546,6.218,4.18,A
 Male,No,40.0,Yes,Artist,12.0,low,1.0,3.0,1.325,6.835,5.88,3.489,A
 Female,No,49.0,Yes,Artist,3.0,low,1.0,6.0,19.5,0.335,8.667,4.327,C
@@ -2642,7 +2619,6 @@ Female,No,28.0,No,Healthcare,0.0,low,4.0,2.0,1.29,4.335,3.063,2.414,B
 Male,No,29.0,Yes,Healthcare,0.0,low,4.0,7.0,-1.638,5.57,7.104,0.212,B
 Female,Yes,86.0,Yes,Lawyer,1.0,high,2.0,6.0,3.461,0.371,10.897,11.878,C
 Female,No,33.0,No,Homemaker,9.0,low,1.0,6.0,9.191,2.616,5.542,2.411,D
-Male,No,20.0,No,Healthcare,1.0,low,4.0,0.0,7.895,2.811,4.75,0.205,D
 Female,No,25.0,Yes,Artist,1.0,low,5.0,4.0,1.825,1.745,2.691,0.156,B
 Male,Yes,59.0,Yes,Artist,1.0,average,3.0,6.0,8.944,0.544,19.495,9.798,C
 Female,No,20.0,No,Healthcare,3.0,average,3.0,1.0,7.735,5.195,-1.528,-0.448,D
@@ -2935,7 +2911,6 @@ Male,Yes,28.0,No,Doctor,8.0,low,2.0,6.0,7.362,6.943,8.02,8.223,A
 Female,No,29.0,Yes,Artist,8.0,low,1.0,6.0,1.169,7.352,4.949,1.507,B
 Female,Yes,47.0,Yes,Artist,0.0,average,1.0,4.0,-3.03,4.358,9.657,0.936,B
 Female,No,40.0,No,Doctor,14.0,low,6.0,7.0,14.494,6.31,0.858,2.767,D
-Male,Yes,72.0,No,Lawyer,0.0,average,2.0,0.0,3.844,5.3,2.798,2.101,A
 Female,Yes,63.0,No,Artist,1.0,average,4.0,6.0,14.157,12.628,4.412,14.579,C
 Male,No,27.0,Yes,Entertainment,0.0,low,4.0,2.0,7.089,4.432,11.331,9.975,C
 Female,Yes,38.0,No,Doctor,9.0,average,5.0,4.0,5.553,4.967,13.375,5.609,D
@@ -3068,7 +3043,6 @@ Female,Yes,47.0,Yes,Entertainment,1.0,low,2.0,4.0,2.447,8.268,2.985,-2.5,B
 Male,Yes,52.0,Yes,Executive,1.0,average,6.0,6.0,2.022,2.309,2.137,5.004,B
 Female,Yes,63.0,Yes,Artist,1.0,high,3.0,6.0,8.09,12.47,13.887,4.221,C
 Female,Yes,39.0,No,Artist,0.0,high,3.0,6.0,-1.861,9.378,1.287,5.409,B
-Female,No,20.0,No,Healthcare,4.0,low,3.0,0.0,9.788,0.126,2.101,4.859,D
 Male,No,21.0,No,Healthcare,1.0,low,4.0,3.0,10.371,8.017,8.865,8.712,D
 Male,No,38.0,No,Doctor,0.0,low,5.0,3.0,12.283,3.588,2.759,2.677,D
 Female,No,43.0,Yes,Healthcare,2.0,average,1.0,4.0,5.94,5.481,6.064,-3.049,D
@@ -3322,7 +3296,6 @@ Male,Yes,87.0,No,Executive,1.0,high,2.0,6.0,7.474,4.136,5.053,6.538,A
 Male,Yes,50.0,Yes,Artist,1.0,average,4.0,4.0,-3.34,4.538,6.124,0.766,B
 Female,No,40.0,Yes,Entertainment,0.0,low,2.0,6.0,6.497,4.894,8.936,7.305,D
 Male,No,22.0,No,Healthcare,2.0,low,2.0,4.0,8.62,5.77,1.093,1.846,D
-Male,Yes,58.0,Yes,Artist,8.0,average,3.0,0.0,14.546,8.047,6.901,3.764,C
 Female,Yes,32.0,Yes,Doctor,0.0,average,2.0,4.0,14.237,5.642,21.636,6.532,C
 Male,No,29.0,No,Entertainment,8.0,low,4.0,6.0,10.752,5.839,12.012,-5.601,D
 Male,No,32.0,Yes,Artist,1.0,low,1.0,6.0,7.242,4.631,-0.277,-0.521,D
@@ -3374,7 +3347,6 @@ Male,No,25.0,Yes,Doctor,8.0,low,5.0,6.0,9.019,5.533,8.27,9.807,D
 Female,Yes,32.0,Yes,Homemaker,0.0,low,3.0,5.0,-0.348,0.641,4.728,-0.27,B
 Female,No,18.0,No,Entertainment,1.0,low,7.0,2.0,1.859,1.432,8.234,1.771,B
 Male,Yes,79.0,No,Lawyer,1.0,low,1.0,6.0,7.14,0.278,4.626,2.534,D
-Female,No,36.0,Yes,Entertainment,7.0,low,5.0,0.0,3.146,5.495,9.924,3.246,D
 Female,No,49.0,Yes,Artist,0.0,low,1.0,4.0,-1.168,6.078,4.634,0.981,B
 Male,Yes,49.0,Yes,Entertainment,0.0,average,4.0,6.0,2.675,11.711,3.598,-0.204,B
 Female,Yes,45.0,Yes,Artist,1.0,average,4.0,6.0,14.247,5.563,9.502,12.135,C
@@ -3539,7 +3511,6 @@ Female,No,35.0,Yes,Artist,13.0,average,2.0,6.0,8.072,11.438,3.866,6.009,B
 Female,Yes,89.0,No,Lawyer,1.0,average,2.0,6.0,4.791,-1.155,3.127,4.888,A
 Male,No,20.0,No,Healthcare,1.0,low,4.0,6.0,9.017,3.834,1.236,2.558,D
 Female,No,40.0,Yes,Healthcare,1.0,low,1.0,4.0,7.027,7.015,8.772,5.225,A
-Male,Yes,46.0,No,Artist,3.0,average,2.0,0.0,6.384,11.028,6.221,0.693,C
 Male,No,25.0,Yes,Marketing,8.0,low,3.0,6.0,4.142,4.385,7.29,4.405,A
 Male,Yes,49.0,Yes,Artist,2.0,average,4.0,2.0,5.976,10.032,7.09,5.821,C
 Female,Yes,47.0,Yes,Artist,1.0,average,2.0,6.0,4.784,6.311,5.543,-3.192,B
@@ -3572,7 +3543,6 @@ Female,Yes,74.0,Yes,Lawyer,1.0,high,3.0,6.0,-2.562,-3.023,1.173,1.113,B
 Female,Yes,40.0,Yes,Engineer,12.0,average,3.0,6.0,4.893,4.196,5.216,1.074,B
 Male,No,26.0,No,Doctor,2.0,low,4.0,6.0,4.08,-0.869,-1.301,3.37,B
 Male,No,35.0,Yes,Artist,0.0,low,1.0,6.0,6.924,5.283,5.139,5.275,A
-Female,No,43.0,Yes,Healthcare,8.0,low,1.0,0.0,3.593,1.41,13.219,4.454,D
 Male,No,49.0,Yes,Doctor,5.0,average,1.0,6.0,7.353,4.019,8.815,8.34,D
 Male,Yes,26.0,No,Artist,7.0,low,4.0,4.0,5.528,2.528,6.619,5.35,A
 Female,Yes,74.0,Yes,Lawyer,1.0,average,2.0,6.0,9.253,5.083,5.333,5.3,A
@@ -3600,7 +3570,6 @@ Female,No,31.0,Yes,Artist,14.0,low,3.0,2.0,5.463,4.216,5.554,6.617,A
 Male,Yes,37.0,Yes,Doctor,0.0,average,2.0,6.0,3.328,4.73,6.951,3.309,A
 Male,Yes,71.0,Yes,Executive,0.0,high,2.0,6.0,4.894,1.089,2.83,-1.323,B
 Male,Yes,66.0,Yes,Healthcare,0.0,low,1.0,4.0,4.978,4.308,6.216,2.069,D
-Female,Yes,25.0,Yes,Homemaker,9.0,average,2.0,0.0,6.747,3.503,5.663,6.97,A
 Male,No,26.0,Yes,Artist,0.0,low,4.0,4.0,7.115,-0.705,4.933,6.151,D
 Female,No,31.0,No,Healthcare,8.0,low,4.0,6.0,1.749,3.66,7.25,2.312,D
 Male,Yes,67.0,Yes,Artist,0.0,average,6.0,1.0,10.106,7.257,2.923,6.276,B
@@ -3922,7 +3891,6 @@ Male,Yes,40.0,Yes,Artist,0.0,average,2.0,6.0,19.152,12.552,10.793,7.331,C
 Male,No,62.0,Yes,Entertainment,1.0,low,4.0,2.0,13.897,5.95,15.948,11.867,C
 Female,No,31.0,Yes,Healthcare,1.0,low,2.0,4.0,16.834,6.019,7.546,2.28,D
 Female,No,25.0,No,Artist,1.0,average,3.0,6.0,19.282,2.005,6.275,-1.013,C
-Male,No,23.0,No,Marketing,0.0,low,3.0,0.0,8.908,4.009,11.473,8.147,C
 Male,No,22.0,No,Marketing,3.0,low,6.0,3.0,13.34,4.52,2.215,6.188,D
 Female,Yes,47.0,Yes,Artist,1.0,high,6.0,6.0,6.504,6.497,1.413,1.23,B
 Male,Yes,68.0,Yes,Artist,0.0,high,2.0,6.0,4.507,0.871,2.718,-1.513,B
@@ -4160,7 +4128,6 @@ Male,Yes,52.0,No,Artist,1.0,average,6.0,6.0,3.247,5.616,7.964,1.89,B
 Male,Yes,56.0,Yes,Artist,0.0,low,2.0,6.0,3.619,6.799,2.984,2.955,B
 Male,Yes,80.0,No,Lawyer,1.0,high,2.0,6.0,3.329,8.972,11.954,11.998,C
 Male,Yes,83.0,No,Executive,0.0,low,7.0,6.0,10.26,4.179,3.135,4.153,D
-Male,Yes,48.0,Yes,Artist,1.0,average,2.0,0.0,-0.132,-1.999,3.534,-3.033,B
 Female,Yes,47.0,Yes,Doctor,1.0,average,2.0,4.0,5.988,5.629,6.26,1.608,A
 Female,Yes,47.0,Yes,Doctor,1.0,average,2.0,4.0,1.256,7.631,2.342,5.878,B
 Female,Yes,83.0,No,Lawyer,1.0,high,2.0,6.0,12.405,-1.863,16.183,19.07,C
@@ -4203,7 +4170,6 @@ Male,Yes,25.0,No,Healthcare,1.0,average,2.0,6.0,5.467,-3.006,5.326,5.995,D
 Female,No,20.0,No,Healthcare,0.0,low,4.0,6.0,11.476,0.214,4.595,3.057,D
 Female,No,27.0,Yes,Healthcare,1.0,low,3.0,7.0,4.796,6.602,-0.39,10.553,D
 Male,No,19.0,No,Healthcare,0.0,low,3.0,2.0,9.417,10.659,7.893,-8.463,D
-Female,No,27.0,No,Doctor,1.0,low,3.0,0.0,3.405,7.75,5.315,1.872,A
 Female,No,26.0,Yes,Healthcare,0.0,low,4.0,2.0,6.048,5.602,6.945,1.108,A
 Male,Yes,55.0,No,Artist,0.0,average,2.0,6.0,11.684,13.753,6.035,13.718,C
 Female,Yes,41.0,No,Engineer,8.0,average,3.0,6.0,13.198,4.395,12.397,9.273,C
@@ -4294,7 +4260,6 @@ Female,Yes,69.0,No,Lawyer,0.0,low,1.0,3.0,7.317,-0.393,16.673,-1.549,D
 Female,Yes,68.0,Yes,Artist,4.0,low,2.0,6.0,6.27,2.4,1.26,-3.735,B
 Female,No,30.0,No,Healthcare,8.0,average,4.0,4.0,3.459,0.831,6.066,0.787,B
 Female,No,26.0,Yes,Doctor,1.0,low,1.0,6.0,5.574,4.489,-0.971,2.791,D
-Male,Yes,32.0,Yes,Doctor,0.0,low,3.0,0.0,2.635,7.087,-2.534,4.642,D
 Female,No,36.0,Yes,Artist,1.0,average,1.0,6.0,9.637,10.584,15.825,14.793,C
 Male,No,18.0,No,Entertainment,0.0,low,5.0,6.0,16.121,10.425,7.168,8.033,C
 Male,No,30.0,Yes,Healthcare,8.0,low,4.0,7.0,12.549,0.144,1.637,-5.428,D
@@ -4840,7 +4805,6 @@ Male,No,20.0,No,Healthcare,5.0,average,4.0,3.0,1.952,4.551,1.356,-0.525,D
 Female,No,20.0,No,Healthcare,2.0,low,6.0,2.0,10.7,16.812,10.793,13.052,D
 Male,Yes,61.0,Yes,Healthcare,1.0,average,7.0,3.0,2.816,2.623,3.286,8.151,B
 Male,No,23.0,No,Doctor,0.0,low,4.0,6.0,4.669,2.438,2.341,4.784,B
-Female,No,52.0,Yes,Artist,0.0,low,2.0,0.0,5.09,11.176,3.057,17.118,C
 Male,Yes,25.0,Yes,Healthcare,8.0,average,2.0,6.0,7.346,3.952,2.426,3.063,D
 Male,No,21.0,No,Healthcare,1.0,low,6.0,5.0,7.535,3.083,8.865,6.469,D
 Male,Yes,59.0,Yes,Artist,0.0,average,6.0,4.0,2.897,4.085,6.011,1.911,B
@@ -4860,7 +4824,6 @@ Male,No,18.0,No,Doctor,0.0,low,3.0,6.0,9.507,6.8,7.236,3.774,D
 Female,No,33.0,Yes,Engineer,0.0,low,2.0,6.0,8.419,4.709,2.577,5.346,A
 Male,No,53.0,Yes,Artist,0.0,low,2.0,6.0,6.057,1.977,6.133,4.814,A
 Male,Yes,27.0,Yes,Artist,9.0,average,3.0,6.0,18.957,7.657,11.9,15.197,C
-Male,Yes,68.0,Yes,Lawyer,0.0,low,2.0,0.0,8.163,3.258,12.116,6.045,C
 Female,No,27.0,Yes,Artist,0.0,low,3.0,7.0,3.531,7.746,6.532,4.095,A
 Male,Yes,37.0,Yes,Artist,4.0,average,2.0,6.0,14.938,4.426,14.016,10.445,C
 Male,Yes,42.0,Yes,Artist,1.0,average,4.0,6.0,0.359,6.846,2.976,5.86,B
@@ -4988,7 +4951,6 @@ Female,Yes,51.0,Yes,Artist,8.0,low,2.0,6.0,11.845,8.308,3.984,11.575,C
 Male,No,39.0,Yes,Artist,5.0,low,2.0,6.0,4.262,6.172,9.195,0.284,B
 Male,No,22.0,No,Healthcare,0.0,low,3.0,3.0,14.477,1.107,3.917,3.403,D
 Female,Yes,47.0,Yes,Doctor,1.0,average,5.0,2.0,8.029,8.756,6.544,4.723,C
-Male,No,32.0,No,Healthcare,8.0,low,4.0,0.0,19.35,2.518,9.896,20.702,C
 Female,Yes,30.0,No,Engineer,0.0,average,2.0,6.0,4.069,6.125,3.986,7.791,D
 Female,Yes,35.0,Yes,Homemaker,13.0,high,7.0,6.0,11.259,6.734,10.904,5.085,C
 Male,No,35.0,Yes,Entertainment,13.0,average,2.0,4.0,18.828,7.806,5.28,3.216,C
@@ -5069,7 +5031,6 @@ Female,No,42.0,Yes,Artist,12.0,low,1.0,6.0,6.201,2.719,3.494,3.431,B
 Male,No,26.0,Yes,Doctor,0.0,low,5.0,6.0,7.944,2.926,8.148,0.623,D
 Female,No,35.0,Yes,Artist,0.0,low,3.0,6.0,5.881,3.57,4.527,4.334,A
 Male,Yes,78.0,No,Lawyer,1.0,high,2.0,6.0,8.419,1.598,3.3,4.534,A
-Male,No,57.0,Yes,Entertainment,4.0,low,1.0,0.0,6.114,1.502,7.734,2.929,A
 Male,Yes,61.0,Yes,Entertainment,4.0,average,2.0,5.0,5.857,2.588,4.211,7.937,B
 Male,No,18.0,No,Healthcare,4.0,low,3.0,3.0,6.979,5.575,3.818,5.929,D
 Female,No,51.0,Yes,Artist,8.0,low,1.0,6.0,16.386,12.36,5.503,10.108,C
@@ -5124,13 +5085,11 @@ Male,Yes,37.0,Yes,Artist,8.0,low,2.0,6.0,2.813,3.741,4.496,1.868,B
 Female,Yes,47.0,Yes,Artist,0.0,high,5.0,6.0,9.527,2.892,9.294,9.502,C
 Female,Yes,66.0,Yes,Lawyer,1.0,average,3.0,6.0,7.969,9.66,16.921,12.874,C
 Female,No,25.0,No,Healthcare,1.0,low,3.0,6.0,2.613,2.469,3.115,1.963,B
-Female,No,43.0,Yes,Artist,2.0,low,1.0,0.0,6.208,6.906,5.0,0.449,A
 Female,No,30.0,Yes,Engineer,9.0,average,5.0,6.0,3.59,-3.595,2.006,2.653,D
 Female,Yes,40.0,Yes,Artist,1.0,average,4.0,6.0,9.164,1.699,11.849,4.071,C
 Female,No,33.0,No,Doctor,1.0,low,8.0,4.0,11.03,0.602,8.421,14.349,C
 Male,Yes,37.0,Yes,Artist,0.0,average,3.0,3.0,9.489,6.81,4.404,2.053,B
 Male,Yes,35.0,Yes,Engineer,5.0,average,4.0,6.0,5.6,-1.662,9.377,3.579,B
-Male,No,21.0,No,Healthcare,1.0,low,4.0,0.0,17.45,9.982,9.139,2.837,D
 Male,Yes,50.0,Yes,Artist,13.0,low,1.0,6.0,10.772,8.503,21.864,14.645,C
 Male,Yes,56.0,Yes,Artist,4.0,low,3.0,3.0,0.729,9.344,4.563,4.594,B
 Female,No,20.0,No,Healthcare,8.0,low,3.0,3.0,9.386,5.343,4.179,6.879,D
@@ -5141,7 +5100,6 @@ Female,Yes,68.0,Yes,Artist,1.0,low,1.0,4.0,-0.4,5.484,3.853,1.659,B
 Male,Yes,33.0,No,Executive,9.0,high,2.0,6.0,12.328,2.903,5.005,5.76,D
 Female,No,26.0,No,Homemaker,9.0,low,2.0,6.0,5.412,4.485,6.189,3.941,A
 Female,No,43.0,No,Marketing,0.0,low,2.0,4.0,8.169,-0.71,4.503,4.942,D
-Male,Yes,52.0,No,Executive,1.0,low,5.0,0.0,9.815,7.931,5.111,5.322,A
 Male,No,37.0,Yes,Artist,8.0,low,1.0,3.0,4.069,4.906,0.782,4.108,A
 Male,No,55.0,Yes,Executive,1.0,low,5.0,6.0,5.819,0.463,13.172,1.796,C
 Male,Yes,57.0,Yes,Artist,0.0,average,4.0,6.0,5.7,2.389,8.222,8.971,C
@@ -5253,7 +5211,6 @@ Male,Yes,67.0,Yes,Executive,0.0,high,4.0,6.0,11.996,15.028,15.383,13.6,C
 Male,No,47.0,No,Entertainment,1.0,low,1.0,6.0,5.829,7.365,5.583,4.78,A
 Female,Yes,26.0,No,Marketing,0.0,low,5.0,4.0,10.271,6.308,9.123,1.867,D
 Female,No,43.0,Yes,Artist,1.0,average,1.0,3.0,8.372,6.043,7.568,5.618,B
-Female,No,30.0,No,Healthcare,1.0,low,3.0,0.0,-4.163,6.108,14.394,13.421,C
 Male,No,29.0,Yes,Doctor,0.0,average,2.0,3.0,5.999,6.785,4.776,5.883,A
 Female,Yes,67.0,No,Engineer,1.0,high,3.0,7.0,0.897,-2.146,5.243,0.011,B
 Male,No,41.0,Yes,Doctor,4.0,average,2.0,6.0,3.945,-3.456,5.326,3.302,B
@@ -5301,7 +5258,6 @@ Male,No,27.0,Yes,Healthcare,9.0,average,2.0,6.0,5.96,1.064,-0.378,4.931,D
 Female,No,20.0,No,Healthcare,1.0,low,3.0,6.0,17.231,0.691,3.13,10.142,D
 Male,Yes,47.0,No,Artist,1.0,average,4.0,6.0,11.77,1.171,12.435,5.797,C
 Male,Yes,50.0,No,Entertainment,1.0,average,3.0,6.0,5.205,1.247,-0.464,4.205,B
-Male,No,37.0,Yes,Doctor,0.0,low,3.0,0.0,7.303,5.532,2.475,5.843,A
 Female,Yes,49.0,Yes,Artist,1.0,average,2.0,6.0,8.918,2.041,10.031,12.125,C
 Male,Yes,29.0,Yes,Healthcare,1.0,low,3.0,3.0,9.994,10.717,7.313,-3.816,D
 Male,Yes,37.0,Yes,Executive,6.0,high,3.0,6.0,14.298,2.904,2.875,7.332,D
@@ -5506,7 +5462,6 @@ Male,No,27.0,Yes,Doctor,0.0,low,5.0,6.0,0.921,1.304,2.701,2.606,B
 Male,Yes,65.0,Yes,Lawyer,0.0,low,1.0,6.0,5.437,4.01,3.273,7.472,A
 Male,Yes,27.0,No,Entertainment,1.0,average,3.0,4.0,6.582,13.605,11.214,4.292,D
 Male,Yes,52.0,No,Entertainment,0.0,average,2.0,4.0,2.333,-0.724,2.872,-1.42,B
-Female,Yes,52.0,Yes,Artist,3.0,low,2.0,0.0,4.547,1.189,3.942,5.365,B
 Female,No,51.0,No,Engineer,8.0,low,6.0,4.0,1.438,10.823,7.494,6.289,D
 Female,Yes,30.0,Yes,Engineer,8.0,average,5.0,4.0,5.036,6.719,8.117,-0.289,D
 Male,No,42.0,Yes,Artist,11.0,low,2.0,6.0,11.548,6.595,8.187,9.872,C
@@ -5543,7 +5498,6 @@ Female,Yes,48.0,Yes,Artist,2.0,low,2.0,6.0,15.24,12.744,5.403,-5.123,C
 Female,No,29.0,Yes,Homemaker,1.0,low,1.0,1.0,8.654,4.196,6.372,1.946,D
 Male,No,30.0,Yes,Healthcare,1.0,low,1.0,6.0,3.257,6.036,1.963,2.033,D
 Male,No,19.0,No,Healthcare,0.0,average,4.0,2.0,10.894,13.495,3.758,-0.861,D
-Male,Yes,88.0,No,Lawyer,1.0,low,1.0,0.0,8.823,5.914,3.78,-0.053,D
 Male,Yes,43.0,Yes,Healthcare,1.0,high,4.0,4.0,-0.137,8.445,3.27,0.706,B
 Male,Yes,38.0,Yes,Entertainment,2.0,average,2.0,6.0,4.675,2.575,6.27,-3.085,B
 Male,No,32.0,No,Doctor,10.0,low,2.0,6.0,6.65,3.038,3.878,3.778,D
@@ -5560,7 +5514,6 @@ Female,Yes,50.0,Yes,Artist,1.0,average,3.0,6.0,19.886,5.943,9.775,4.485,C
 Male,Yes,71.0,Yes,Artist,1.0,average,2.0,6.0,20.005,5.141,14.21,7.053,C
 Female,No,18.0,No,Healthcare,0.0,low,5.0,4.0,0.435,1.391,3.077,12.147,D
 Male,No,35.0,No,Healthcare,1.0,low,1.0,4.0,5.134,5.312,9.301,1.676,D
-Female,Yes,45.0,Yes,Artist,8.0,average,2.0,0.0,-1.788,7.63,2.421,-0.295,B
 Female,No,41.0,Yes,Artist,2.0,low,1.0,6.0,4.528,7.84,5.0,3.656,A
 Male,No,20.0,No,Marketing,0.0,low,3.0,3.0,3.707,6.452,7.333,0.048,B
 Male,Yes,27.0,No,Entertainment,14.0,average,2.0,6.0,6.662,9.358,5.966,0.904,A
@@ -5569,7 +5522,6 @@ Female,No,18.0,No,Healthcare,0.0,low,4.0,4.0,5.616,5.135,6.419,7.01,D
 Female,Yes,41.0,Yes,Artist,9.0,high,2.0,2.0,5.574,1.861,2.486,0.358,B
 Male,Yes,67.0,No,Lawyer,1.0,average,2.0,6.0,4.52,6.174,5.812,5.983,A
 Female,Yes,28.0,Yes,Artist,0.0,low,2.0,7.0,4.175,8.356,6.716,4.458,A
-Female,No,29.0,No,Healthcare,8.0,low,3.0,0.0,3.598,7.705,4.278,3.497,D
 Male,Yes,45.0,No,Artist,1.0,average,4.0,6.0,4.785,0.137,-0.837,1.4,B
 Male,Yes,36.0,No,Executive,8.0,high,4.0,6.0,15.262,4.363,-1.68,3.906,C
 Female,No,33.0,No,Engineer,1.0,low,3.0,6.0,10.408,8.173,3.971,7.424,C
@@ -5812,7 +5764,6 @@ Male,Yes,51.0,Yes,Executive,3.0,high,5.0,6.0,16.657,4.376,11.916,8.775,C
 Female,No,36.0,Yes,Artist,11.0,low,3.0,6.0,3.299,3.745,10.186,4.792,A
 Male,Yes,25.0,Yes,Artist,8.0,low,4.0,6.0,9.8,1.474,3.603,-2.27,D
 Female,Yes,37.0,Yes,Artist,1.0,average,2.0,6.0,16.937,9.726,4.058,13.595,C
-Female,Yes,39.0,Yes,Doctor,8.0,average,2.0,0.0,19.642,11.15,5.68,10.149,C
 Female,Yes,35.0,Yes,Artist,0.0,average,2.0,6.0,17.274,4.498,10.952,12.541,C
 Male,No,21.0,No,Healthcare,1.0,low,4.0,2.0,9.66,7.094,3.715,5.507,D
 Female,Yes,55.0,Yes,Artist,1.0,average,4.0,3.0,16.077,6.877,6.599,13.595,C
@@ -5896,7 +5847,6 @@ Male,Yes,47.0,No,Entertainment,9.0,average,6.0,6.0,16.803,10.389,4.034,12.264,C
 Male,No,26.0,Yes,Healthcare,1.0,low,3.0,6.0,5.149,-0.416,-1.406,2.672,B
 Female,Yes,60.0,Yes,Lawyer,1.0,average,3.0,6.0,17.325,11.194,6.78,16.551,C
 Male,Yes,41.0,Yes,Executive,5.0,low,2.0,1.0,3.15,2.144,3.208,5.543,A
-Male,Yes,47.0,Yes,Executive,1.0,high,4.0,0.0,0.471,2.308,1.729,-2.895,B
 Male,No,27.0,Yes,Artist,7.0,average,3.0,6.0,15.366,1.625,-1.185,1.624,D
 Male,No,18.0,No,Healthcare,1.0,low,3.0,3.0,12.379,6.255,3.438,3.525,D
 Female,No,46.0,Yes,Artist,8.0,low,1.0,6.0,7.184,1.063,19.32,0.53,C
@@ -6027,7 +5977,6 @@ Male,Yes,83.0,Yes,Executive,0.0,high,2.0,6.0,6.855,3.888,1.76,5.396,A
 Female,No,25.0,Yes,Entertainment,9.0,low,2.0,6.0,3.118,1.357,7.756,5.774,A
 Male,Yes,45.0,Yes,Artist,0.0,average,4.0,6.0,11.744,10.744,11.193,8.289,C
 Female,No,29.0,Yes,Engineer,1.0,average,1.0,6.0,4.17,7.339,5.413,4.686,A
-Male,Yes,43.0,Yes,Artist,9.0,average,2.0,0.0,9.03,9.386,3.092,15.906,C
 Female,Yes,65.0,Yes,Lawyer,0.0,low,1.0,6.0,8.578,4.171,2.879,1.798,A
 Female,Yes,46.0,Yes,Artist,0.0,high,4.0,6.0,5.796,2.804,3.835,-1.294,B
 Male,Yes,59.0,Yes,Artist,8.0,low,1.0,6.0,-3.153,1.843,1.151,5.61,B
@@ -6047,7 +5996,6 @@ Female,Yes,41.0,Yes,Artist,5.0,high,3.0,5.0,-1.317,4.905,8.071,-1.305,B
 Male,No,25.0,No,Healthcare,4.0,low,5.0,6.0,15.895,3.633,8.313,14.836,D
 Male,Yes,26.0,Yes,Healthcare,9.0,high,3.0,2.0,11.047,-0.882,4.256,9.29,D
 Female,No,27.0,No,Doctor,0.0,low,5.0,3.0,8.439,3.99,4.71,0.582,A
-Male,Yes,41.0,No,Executive,0.0,high,3.0,0.0,8.887,6.241,3.478,4.721,A
 Female,Yes,80.0,Yes,Lawyer,0.0,low,1.0,6.0,13.335,9.178,9.994,5.88,C
 Female,No,28.0,Yes,Healthcare,1.0,low,3.0,2.0,5.654,2.0,8.139,9.587,D
 Female,Yes,66.0,Yes,Artist,0.0,low,2.0,6.0,14.845,1.323,10.906,3.949,C
@@ -6064,7 +6012,6 @@ Male,Yes,61.0,No,Entertainment,1.0,low,2.0,6.0,3.74,2.831,5.763,3.222,A
 Male,Yes,52.0,Yes,Executive,1.0,high,4.0,1.0,15.212,-2.068,8.7,4.149,C
 Female,No,23.0,No,Healthcare,1.0,low,4.0,6.0,8.609,-1.943,8.356,-0.435,D
 Male,Yes,35.0,Yes,Artist,1.0,average,3.0,2.0,16.251,3.509,13.003,-0.021,C
-Female,Yes,49.0,Yes,Artist,0.0,high,3.0,0.0,3.775,3.664,5.652,0.655,B
 Female,No,27.0,Yes,Engineer,9.0,low,7.0,3.0,16.969,6.046,10.35,16.641,C
 Male,No,43.0,Yes,Artist,1.0,low,2.0,6.0,5.934,3.837,8.695,2.741,A
 Female,No,35.0,No,Entertainment,1.0,average,1.0,6.0,-0.574,1.357,3.969,0.1,B
@@ -6318,7 +6265,6 @@ Male,Yes,52.0,Yes,Entertainment,0.0,average,4.0,6.0,2.558,1.99,7.635,-2.102,B
 Female,No,27.0,No,Engineer,14.0,average,8.0,4.0,9.196,7.837,8.652,8.018,D
 Male,Yes,63.0,Yes,Entertainment,6.0,average,2.0,6.0,6.173,-0.256,3.286,-1.607,D
 Female,Yes,89.0,Yes,Lawyer,1.0,high,2.0,2.0,12.173,8.322,17.207,0.593,C
-Female,Yes,86.0,Yes,Artist,1.0,low,4.0,0.0,12.309,10.169,7.173,2.355,D
 Male,Yes,31.0,No,Executive,1.0,average,2.0,4.0,5.121,9.481,6.713,2.683,D
 Female,No,41.0,Yes,Artist,0.0,low,1.0,6.0,11.48,10.595,10.724,2.253,C
 Female,Yes,35.0,No,Artist,1.0,average,2.0,6.0,3.378,6.264,0.067,1.22,B
@@ -6346,7 +6292,6 @@ Female,No,32.0,No,Healthcare,0.0,low,4.0,3.0,15.057,8.626,13.624,9.703,C
 Male,Yes,35.0,Yes,Artist,1.0,average,1.0,3.0,4.545,4.367,3.139,4.043,A
 Female,Yes,82.0,Yes,Lawyer,1.0,high,2.0,6.0,7.353,1.756,9.197,-0.225,A
 Female,Yes,40.0,No,Engineer,1.0,low,4.0,4.0,5.615,7.121,2.605,2.397,A
-Female,No,26.0,No,Engineer,0.0,average,5.0,0.0,7.088,6.462,6.387,4.754,A
 Male,No,32.0,Yes,Healthcare,2.0,low,3.0,6.0,17.581,5.228,7.415,5.349,C
 Female,Yes,81.0,Yes,Lawyer,1.0,average,2.0,6.0,3.726,15.698,2.323,12.585,C
 Male,No,49.0,Yes,Artist,0.0,low,1.0,6.0,1.725,1.287,5.177,0.451,B
@@ -6431,7 +6376,6 @@ Male,Yes,41.0,Yes,Artist,1.0,average,2.0,6.0,14.363,11.672,6.543,14.287,C
 Male,Yes,41.0,Yes,Artist,11.0,high,2.0,6.0,4.477,5.89,5.109,4.318,A
 Female,No,25.0,No,Engineer,1.0,low,1.0,6.0,8.661,6.253,4.226,5.193,A
 Female,Yes,23.0,No,Healthcare,7.0,high,2.0,6.0,4.907,2.71,1.454,-0.63,B
-Female,Yes,47.0,Yes,Artist,1.0,high,5.0,0.0,4.483,5.028,15.882,5.869,C
 Female,Yes,35.0,Yes,Artist,0.0,high,2.0,7.0,13.482,7.15,8.052,7.553,C
 Male,Yes,51.0,Yes,Executive,1.0,average,3.0,6.0,12.399,6.804,11.954,5.025,C
 Male,Yes,62.0,Yes,Artist,10.0,average,1.0,6.0,2.316,2.704,9.452,2.422,B
@@ -6567,7 +6511,6 @@ Male,Yes,89.0,No,Lawyer,0.0,low,3.0,6.0,6.304,2.271,1.897,1.849,A
 Female,Yes,27.0,Yes,Doctor,1.0,low,2.0,4.0,17.356,1.73,5.573,0.528,D
 Female,Yes,43.0,Yes,Engineer,1.0,average,4.0,6.0,3.371,4.399,3.023,-3.691,B
 Female,No,25.0,No,Marketing,1.0,average,2.0,6.0,6.014,2.145,12.909,-0.264,D
-Female,No,19.0,No,Healthcare,4.0,low,5.0,0.0,5.196,5.045,8.326,3.242,D
 Male,No,43.0,Yes,Artist,1.0,low,1.0,6.0,0.428,5.244,-0.139,2.334,B
 Male,Yes,37.0,Yes,Entertainment,1.0,average,4.0,6.0,5.148,3.85,5.752,-2.143,B
 Female,No,27.0,Yes,Healthcare,1.0,low,9.0,6.0,11.741,5.108,13.666,6.147,C
@@ -6595,7 +6538,6 @@ Male,Yes,59.0,No,Artist,0.0,low,1.0,6.0,6.203,0.727,3.449,4.849,B
 Male,Yes,39.0,Yes,Healthcare,1.0,low,3.0,3.0,6.915,2.583,6.689,8.818,D
 Female,Yes,40.0,Yes,Artist,9.0,average,3.0,6.0,17.984,9.823,12.958,12.911,C
 Female,Yes,73.0,Yes,Artist,1.0,average,2.0,6.0,9.658,13.521,3.644,7.217,C
-Female,No,25.0,Yes,Artist,5.0,low,1.0,0.0,16.778,5.444,11.498,10.745,C
 Male,Yes,40.0,Yes,Artist,0.0,high,3.0,6.0,0.124,5.518,5.917,5.04,A
 Male,No,38.0,Yes,Entertainment,1.0,average,2.0,6.0,5.494,5.415,8.065,1.487,A
 Male,Yes,45.0,Yes,Artist,1.0,average,3.0,3.0,7.322,1.746,0.309,3.613,B
@@ -6635,8 +6577,6 @@ Female,Yes,48.0,Yes,Engineer,0.0,high,5.0,4.0,8.219,4.372,5.525,2.641,A
 Female,Yes,57.0,Yes,Artist,0.0,high,3.0,1.0,9.406,8.355,14.429,3.139,C
 Male,Yes,43.0,Yes,Executive,6.0,high,3.0,4.0,7.854,5.201,3.721,6.994,A
 Female,Yes,56.0,Yes,Artist,1.0,low,2.0,6.0,0.651,0.765,-1.197,-0.269,B
-Female,Yes,48.0,No,Artist,0.0,low,3.0,0.0,18.95,6.144,16.127,9.77,C
-Male,No,26.0,Yes,Artist,1.0,low,1.0,0.0,-0.398,-4.773,1.337,2.907,B
 Male,No,28.0,Yes,Healthcare,0.0,low,5.0,6.0,4.992,4.592,4.821,6.151,D
 Female,Yes,42.0,Yes,Artist,1.0,average,3.0,6.0,15.938,2.086,18.074,10.192,C
 Female,Yes,62.0,Yes,Lawyer,1.0,low,3.0,6.0,3.604,3.172,5.609,3.52,A
@@ -6718,7 +6658,6 @@ Male,No,19.0,No,Healthcare,7.0,average,4.0,4.0,8.375,10.238,2.388,3.724,D
 Male,Yes,39.0,Yes,Artist,0.0,average,3.0,6.0,7.473,7.242,5.186,2.131,B
 Male,Yes,28.0,No,Doctor,5.0,low,2.0,3.0,14.242,5.931,0.008,13.388,D
 Female,Yes,40.0,Yes,Artist,0.0,average,4.0,6.0,8.089,7.765,8.875,1.467,B
-Female,Yes,29.0,No,Marketing,1.0,low,3.0,0.0,16.426,7.705,4.947,4.73,D
 Male,Yes,53.0,Yes,Doctor,1.0,low,3.0,6.0,4.81,7.127,1.874,3.901,A
 Female,Yes,42.0,Yes,Artist,1.0,average,2.0,6.0,23.336,9.426,13.713,7.244,C
 Male,Yes,40.0,No,Artist,1.0,average,2.0,4.0,6.568,4.839,4.137,4.971,A
@@ -6762,7 +6701,6 @@ Male,Yes,71.0,Yes,Artist,0.0,average,4.0,6.0,11.551,6.555,13.433,12.827,C
 Female,Yes,60.0,No,Engineer,0.0,low,2.0,3.0,3.424,4.143,5.578,4.963,A
 Male,No,27.0,Yes,Doctor,0.0,low,2.0,6.0,4.823,12.75,7.864,12.246,C
 Female,Yes,57.0,Yes,Artist,0.0,low,2.0,6.0,2.327,4.174,4.329,2.466,B
-Male,No,26.0,No,Healthcare,1.0,low,3.0,0.0,9.789,4.422,12.349,9.492,C
 Female,Yes,18.0,No,Artist,1.0,high,3.0,1.0,6.591,-1.552,1.802,2.037,B
 Female,Yes,42.0,Yes,Artist,4.0,average,2.0,6.0,12.996,4.489,9.278,14.59,C
 Male,Yes,49.0,No,Executive,11.0,high,4.0,6.0,8.252,1.056,1.597,2.792,A
@@ -6811,7 +6749,6 @@ Female,Yes,77.0,No,Lawyer,1.0,high,2.0,6.0,7.773,2.982,3.572,5.5,A
 Male,Yes,68.0,No,Executive,1.0,high,3.0,7.0,3.8,1.545,1.718,8.913,B
 Male,No,26.0,Yes,Healthcare,5.0,low,5.0,6.0,11.26,4.233,3.31,7.505,D
 Male,Yes,46.0,Yes,Artist,2.0,average,4.0,2.0,11.199,4.617,3.61,8.036,C
-Male,Yes,36.0,Yes,Artist,1.0,average,2.0,0.0,11.919,8.502,14.445,14.332,C
 Female,Yes,40.0,Yes,Artist,4.0,average,5.0,4.0,6.561,2.518,3.66,1.366,B
 Male,No,33.0,Yes,Healthcare,9.0,low,5.0,6.0,9.008,1.214,6.76,2.178,D
 Male,No,56.0,No,Marketing,1.0,low,2.0,6.0,9.488,-1.278,2.909,8.032,D
@@ -6961,7 +6898,6 @@ Male,Yes,53.0,Yes,Artist,9.0,low,2.0,6.0,-2.898,5.408,6.507,7.597,B
 Male,No,21.0,No,Doctor,6.0,low,6.0,7.0,14.607,10.94,15.158,13.789,C
 Male,Yes,70.0,No,Executive,1.0,high,2.0,6.0,-0.377,6.378,2.267,3.145,B
 Male,Yes,82.0,Yes,Lawyer,0.0,high,2.0,6.0,3.11,-1.14,9.517,9.6,D
-Female,Yes,39.0,No,Artist,0.0,average,4.0,0.0,6.419,8.663,6.083,0.915,A
 Male,Yes,49.0,Yes,Doctor,1.0,average,2.0,1.0,6.254,4.818,5.457,2.711,A
 Female,Yes,35.0,Yes,Engineer,0.0,average,2.0,4.0,7.251,7.321,4.715,19.225,C
 Female,Yes,50.0,Yes,Doctor,0.0,low,3.0,6.0,6.25,8.337,17.827,-0.378,C
@@ -7000,7 +6936,6 @@ Male,Yes,28.0,No,Entertainment,9.0,high,4.0,6.0,16.663,6.64,4.73,0.1,D
 Female,No,31.0,No,Healthcare,0.0,low,5.0,2.0,9.702,-3.084,10.871,7.296,D
 Female,Yes,58.0,Yes,Artist,1.0,average,2.0,6.0,11.409,1.799,7.249,9.728,C
 Female,No,31.0,Yes,Healthcare,0.0,low,3.0,2.0,13.092,11.202,8.585,9.542,C
-Male,Yes,79.0,No,Entertainment,1.0,low,1.0,0.0,13.907,6.187,8.077,2.356,D
 Male,Yes,52.0,Yes,Executive,1.0,high,4.0,6.0,18.78,2.533,8.634,8.49,C
 Female,No,30.0,No,Homemaker,3.0,low,3.0,6.0,2.842,-1.979,6.062,0.12,D
 Male,Yes,42.0,Yes,Executive,1.0,high,3.0,6.0,13.528,1.888,11.742,8.918,C
@@ -7141,7 +7076,6 @@ Female,Yes,50.0,Yes,Artist,9.0,low,2.0,6.0,9.802,8.924,8.069,8.414,C
 Female,No,48.0,Yes,Marketing,0.0,low,1.0,7.0,5.811,3.247,4.456,3.077,A
 Male,Yes,42.0,Yes,Artist,0.0,average,3.0,3.0,11.949,-0.744,21.986,4.509,C
 Female,Yes,67.0,No,Lawyer,1.0,high,4.0,4.0,4.42,2.144,13.117,-3.132,D
-Male,Yes,56.0,No,Artist,0.0,low,2.0,0.0,15.897,2.479,9.492,15.492,C
 Male,No,27.0,No,Healthcare,0.0,average,4.0,6.0,7.1,15.364,6.454,7.165,D
 Male,No,30.0,Yes,Artist,5.0,low,4.0,6.0,20.848,14.27,7.723,6.794,C
 Female,Yes,47.0,Yes,Entertainment,3.0,average,3.0,6.0,5.193,5.516,5.288,2.843,A
@@ -7211,7 +7145,6 @@ Male,Yes,49.0,Yes,Artist,1.0,low,3.0,6.0,13.296,8.051,13.915,0.485,C
 Female,No,19.0,No,Healthcare,0.0,low,4.0,6.0,16.423,2.201,3.492,-0.777,D
 Male,Yes,49.0,Yes,Artist,0.0,average,4.0,6.0,3.57,1.013,2.337,-0.117,B
 Female,No,43.0,Yes,Entertainment,14.0,low,1.0,6.0,8.591,3.889,3.596,2.013,A
-Female,Yes,35.0,Yes,Homemaker,7.0,average,4.0,0.0,-1.707,0.385,1.906,-0.576,B
 Male,No,32.0,Yes,Healthcare,4.0,low,3.0,2.0,10.15,3.032,3.624,2.416,D
 Female,No,26.0,No,Healthcare,1.0,low,8.0,4.0,17.183,3.451,2.334,5.677,C
 Male,Yes,65.0,Yes,Executive,1.0,low,1.0,6.0,-2.203,-0.836,1.683,0.029,B

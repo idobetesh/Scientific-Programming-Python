@@ -1,6 +1,6 @@
 import numpy as np
 import pandas as pd
-import seaborn as sb
+import seaborn as sns
 import matplotlib.pyplot as plt
 from sklearn import metrics
 from sklearn.model_selection import train_test_split
@@ -28,7 +28,7 @@ def printProfessionCount(df):
 # Ordinal categorical features => Spending_Score | Group
 
 # Replace all 'na' with median [numeric only]
-# Integer replacment
+# Numeric data replacment
 df.Age = df.Age.fillna(df.Age.median())
 df.Work_Experience = df.Work_Experience.fillna(df.Work_Experience.median())
 df.Family_Size = df.Family_Size.fillna(df.Family_Size.median())
@@ -37,8 +37,13 @@ df.Shop_Other.fillna(df.Shop_Other.median())
 df.Shop_Dairy.fillna(df.Shop_Dairy.median())
 df.Shop_Household.fillna(df.Shop_Household.median())
 df.Shop_Meat.fillna(df.Shop_Meat.median())
+
 # Keep all float numbers 3 digits rounded
 df = df.round(3)
+
+# Remove all row where Shop_Day == 0
+day_zero = df.index[df['Shop_Day'] == 0].tolist() # 72 rows in total
+df = df.drop(df.index[day_zero])
 
 # Keep all categorical data in lower case
 df.Spending_Score = df.Spending_Score.str.lower()

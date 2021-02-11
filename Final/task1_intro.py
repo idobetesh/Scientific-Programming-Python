@@ -1,6 +1,6 @@
 import numpy as np
 import pandas as pd
-import seaborn as sb
+import seaborn as sns
 import matplotlib.pyplot as plt
 from sklearn import metrics
 from sklearn.naive_bayes import GaussianNB
@@ -38,6 +38,7 @@ df = df.dropna(axis=0, subset=['Profession'])
 # plt.tight_layout()
 # plt.grid(True)
 # plt.show()
+
 print(f"Male count: {sum(df['Gender'] == 'Male')}")
 print(f"Female count: {sum(df['Gender'] == 'Female')}")
 df['Gender'].hist(bins=len(df['Gender'].unique()), edgecolor='orange')
@@ -48,4 +49,11 @@ plt.tight_layout()
 plt.grid(True) 
 plt.show()
 
+# df['Group'].hist(color='green', bins=len(df['Group'].unique()), edgecolor='red')
+# plt.title('Group Distribution on Clean Data')
+# plt.ylabel('Count', color='blue')
+# plt.xlabel('Group', color='blue')
+# plt.tight_layout()
+# plt.grid(True) 
+# plt.show()
 printProfessionCount(df)
