@@ -57,3 +57,5 @@ plt.show()
 # plt.grid(True) 
 # plt.show()
 printProfessionCount(df)
+
+

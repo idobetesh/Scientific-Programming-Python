@@ -6,7 +6,7 @@ Gender: Boolean, Male/Female
 Ever_Married: Boolean, Yes/No - was the customer married
 Age: continuous, customer age
 Graduated: Boolean, Yes/No - is the customer a high school graduate
-Profession: categorical - customer profession ['Healthcare' 'Engineer' 'Lawyer' 'Entertainment' 'Artist' 'Executive''Doctor' 'Homemaker' 'Marketing' nan]
+Profession: categorical - customer profession ['Healthcare' 'Engineer' 'Lawyer' 'Entertainment' 'Artist' 'Executive' 'Doctor' 'Homemaker' 'Marketing' nan]
 Work_Experience: integer - number of years of work experience
 Spending_Score: Categorical, Low/Average/High - spending habits
 Family_Size: integer - number of family members (household)
