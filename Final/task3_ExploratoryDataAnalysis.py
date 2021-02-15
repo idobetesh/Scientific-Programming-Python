@@ -98,43 +98,63 @@ ax1 = df.groupby(['Ever_Married'])['Age_Range'].value_counts().unstack()
 ax2 = df.groupby(['Age_Range'])['Profession'].value_counts().unstack()
 ax3 = df.groupby(['Ever_Married'])['Spending_Score'].value_counts().unstack()
 ax4 = df.groupby(['Age_Range'])['Spending_Score'].value_counts().unstack()
-ax5 = df.groupby(['Profession'])['Spending_Score'].value_counts().unstack()
-ax6 = df.groupby(['Profession'])['Gender'].value_counts().unstack()
+ax5 = df.groupby(['Spending_Score'])['Profession'].value_counts().unstack()
+ax6 = df.groupby(['Gender'])['Profession'].value_counts().unstack()
+ax7 = df.groupby(['Graduated'])['Profession'].value_counts().unstack()
+ax8 = df.groupby(['Ever_Married'])['Profession'].value_counts().unstack()
 
 #count plot
-fig, ax = plt.subplots(3,2)
-ax1.plot(kind='bar',ax=ax[0][0],figsize = (15,4))
-ax[0][0].set_title(str(ax1))
+# fig, ax = plt.subplots(4,2)
+# ax1.plot(kind='bar',ax=ax[0][0],figsize = (20,35))
+# ax[0][0].set_title(str(ax1))
 
-ax2.plot(kind='bar',ax=ax[0][1],figsize = (15,4))
-ax[0][1].set_title(str(ax2))
+# ax2.plot(kind='bar',ax=ax[0][1],figsize = (20,35))
+# ax[0][1].set_title(str(ax2))
 
-ax3.plot(kind='bar',ax=ax[1][0],figsize = (15,4))
-ax[1][0].set_title(str(ax3))
+# ax3.plot(kind='bar',ax=ax[1][0],figsize = (20,35))
+# ax[1][0].set_title(str(ax3))
 
-ax4.plot(kind='bar',ax=ax[1][1],figsize = (15,4))
-ax[1][1].set_title(str(ax4))
+# ax4.plot(kind='bar',ax=ax[1][1],figsize = (20,35))
+# ax[1][1].set_title(str(ax4))
 
-ax5.plot(kind='bar',ax=ax[2][0],figsize = (15,4))
-ax[2][0].set_title(str(ax5))
+# ax5.plot(kind='bar',ax=ax[2][0],figsize = (20,35))
+# ax[2][0].set_title(str(ax5))
 
-ax6.plot(kind='bar',ax=ax[2][1],figsize = (15,4))
-ax[2][1].set_title(str(ax6))
+# ax6.plot(kind='bar',ax=ax[2][1],figsize = (20,35))
+# ax[2][1].set_title(str(ax6))
+
+# ax7.plot(kind='bar',ax=ax[3][0],figsize = (20,35))
+# ax[3][0].set_title(str(ax7))
+
+# ax8.plot(kind='bar',ax=ax[3][1],figsize = (20,35))
+# ax[3][1].set_title(str(ax7))
+# plt.show()
+
+fig, ax = plt.subplots(8,1)
+ax1.plot(kind='bar',ax=ax[0],figsize = (20,35))
+ax[0].set_title(str(ax1))
+
+ax2.plot(kind='bar',ax=ax[0],figsize = (20,35))
+ax[0].set_title(str(ax2))
+
+ax3.plot(kind='bar',ax=ax[1],figsize = (20,35))
+ax[1].set_title(str(ax3))
+
+ax4.plot(kind='bar',ax=ax[2],figsize = (20,35))
+ax[2].set_title(str(ax4))
+
+ax5.plot(kind='bar',ax=ax[3],figsize = (20,35))
+ax[3].set_title(str(ax5))
+
+ax6.plot(kind='bar',ax=ax[4],figsize = (20,35))
+ax[5].set_title(str(ax6))
+
+ax7.plot(kind='bar',ax=ax[7],figsize = (20,35))
+ax[6].set_title(str(ax7))
+
+ax8.plot(kind='bar',ax=ax[8],figsize = (20,35))
+ax[8].set_title(str(ax7))
 plt.show()
 
-
-# ax2 = df.pivot_table(columns='Gender',index='Segmentation',values='ID',aggfunc='count')
-# ax2 = ax2.div(ax2.sum(axis=1), axis = 0).round(2)
-
-# #count plot
-# fig, ax = plt.subplots(1,2)
-# ax1.plot(kind='bar',ax = ax[0],figsize = (15,4))
-# ax[0].set_xticklabels(labels = ['A','B','C','D'],rotation = 0)
-# ax[0].set_title(str(ax1))
-
-# #stacked bars
-# ax2.plot(kind='bar',stacked = True,ax = ax[1],figsize = (15,4))
-# ax[1].set_xticklabels(labels = ['A','B','C','D'],rotation = 0)
-# ax[1].set_title(str(ax2))
-# plt.show()
+# sns.pairplot(df, hue='Group', hue_order=['A','B','C','D'], kind='kde', x_vars=['Shop_Day', 'Family_Size'], y_vars=['Spending_Score_Level','Group_Level'])
 
