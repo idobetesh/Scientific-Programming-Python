@@ -6,7 +6,7 @@ from sklearn import metrics
 from sklearn.naive_bayes import GaussianNB
 from sklearn.model_selection import train_test_split
 
-df = pd.read_csv('./Data/clean_customers.csv')
+df = pd.read_csv('./Data/clean_customers2.csv')
 # df = pd.read_csv('./Data/avg.csv')
 # df = pd.read_csv('./Data/clean_customers2.csv')
 # print(df)
@@ -36,22 +36,20 @@ df = pd.read_csv('./Data/clean_customers.csv')
 # print(df.pivot_table('Shop_Dairy', ['Group']))
 # print(df.pivot_table('Animal_Product_Avg', ['Group']))
 
-print(df.describe())
-df = pd.concat([df, pd.get_dummies(df['Gender'], prefix='Gender')], axis=1)
-df = pd.concat([df, pd.get_dummies(df['Ever_Married'], prefix='Ever_Married')], axis=1)
-df = pd.concat([df, pd.get_dummies(df['Graduated'], prefix='Graduated')], axis=1)
-df = pd.concat([df, pd.get_dummies(df['Profession'], prefix='Profession')], axis=1)
-df['Age_Range'] = np.where(df.Age>=60, '60+', np.where(df.Age>=50, '50-60', np.where(df.Age>=40, '40-50', np.where(df.Age>=30, '30-40', np.where(df.Age>=18, '18-30', '-18')))))
-df['Work_Experience_Range'] = np.where(df.Work_Experience>=10, '10+', np.where(df.Work_Experience>=5, '5-10', '0-5'))
-df['Family_Size_Range'] = np.where(df.Family_Size>=6, '6+', np.where(df.Family_Size>=3, '3-6', '0-3'))
-df['Shop_Other_Range'] = np.where(df.Shop_Other>=20, '20+', np.where(df.Shop_Other>=10, '10-20', np.where(df.Shop_Other>=0, '0-10', '-0'))) # -10,0,10,20
-df['Shop_Dairy_Range'] = np.where(df.Shop_Dairy>=20, '20+', np.where(df.Shop_Dairy>=10, '10-20', np.where(df.Shop_Dairy>=0, '0-10', '-0'))) # -10,0,10,20
-df['Shop_Household_Range'] = np.where(df.Shop_Household>=20, '20+', np.where(df.Shop_Household>=10, '10-20', np.where(df.Shop_Household>=0, '0-10', '-0'))) # -10,0,10,20
-df['Shop_Meat_Range'] = np.where(df.Shop_Meat>=20, '20+', np.where(df.Shop_Meat>=10, '10-20', np.where(df.Shop_Meat>=0, '0-10', '-0'))) # -10,0,10,20
-df['Spending_Score_Level'] = pd.Categorical(df['Spending_Score'], ordered=True, categories=['low', 'average', 'high']).codes+1 
-df['Group_Level'] = pd.Categorical(df['Group'], ordered=True, categories=['A','B','C','D']).codes+1 
-df = df.round(3)
-df.to_csv('Data/clean_customers2.csv', index=False)
+# df = pd.concat([df, pd.get_dummies(df['Gender'], prefix='Gender')], axis=1)
+# df = pd.concat([df, pd.get_dummies(df['Ever_Married'], prefix='Ever_Married')], axis=1)
+# df = pd.concat([df, pd.get_dummies(df['Graduated'], prefix='Graduated')], axis=1)
+# df = pd.concat([df, pd.get_dummies(df['Profession'], prefix='Profession')], axis=1)
+# df['Age_Range'] = np.where(df.Age>=60, '60+', np.where(df.Age>=50, '50-60', np.where(df.Age>=40, '40-50', np.where(df.Age>=30, '30-40', np.where(df.Age>=18, '18-30', '-18')))))
+# df['Work_Experience_Range'] = np.where(df.Work_Experience>=10, '10+', np.where(df.Work_Experience>=5, '5-10', '0-5'))
+# df['Family_Size_Range'] = np.where(df.Family_Size>=6, '6+', np.where(df.Family_Size>=3, '3-6', '0-3'))
+# df['Shop_Other_Range'] = np.where(df.Shop_Other>=20, '20+', np.where(df.Shop_Other>=10, '10-20', np.where(df.Shop_Other>=0, '0-10', '-0'))) # -10,0,10,20
+# df['Shop_Dairy_Range'] = np.where(df.Shop_Dairy>=20, '20+', np.where(df.Shop_Dairy>=10, '10-20', np.where(df.Shop_Dairy>=0, '0-10', '-0'))) # -10,0,10,20
+# df['Shop_Household_Range'] = np.where(df.Shop_Household>=20, '20+', np.where(df.Shop_Household>=10, '10-20', np.where(df.Shop_Household>=0, '0-10', '-0'))) # -10,0,10,20
+# df['Shop_Meat_Range'] = np.where(df.Shop_Meat>=20, '20+', np.where(df.Shop_Meat>=10, '10-20', np.where(df.Shop_Meat>=0, '0-10', '-0'))) # -10,0,10,20
+# df['Spending_Score_Level'] = pd.Categorical(df['Spending_Score'], ordered=True, categories=['low', 'average', 'high']).codes+1 
+# df['Group_Level'] = pd.Categorical(df['Group'], ordered=True, categories=['A','B','C','D']).codes+1 
+# df.to_csv('Data/clean_customers2.csv', index=False)
 
 
 # df['Shop_Day'].hist(bins=len(df['Shop_Day'].unique()), edgecolor='orange')
@@ -70,26 +68,73 @@ df.to_csv('Data/clean_customers2.csv', index=False)
 # sns.displot(data=df['Family_Size'], kde=True, color='green')
 # plt.show()
 
-# fig, ax = plt.subplots(3, 3, figsize=(30, 18))
+
+####################### COUNTPLOTS ####################### 
+# fig, ax = plt.subplots(6, 2, figsize=(20, 35))
 # group_order = ['A','B','C','D']
 # sns.countplot(x='Gender', hue='Group', data=df, ax=ax[0][0], hue_order=group_order, palette='husl')
 # sns.countplot(x='Age_Range', hue='Group', data=df, ax=ax[0][1], hue_order=group_order, palette='husl')
-# sns.countplot(x='Profession', hue='Group', data=df, ax=ax[0][2], hue_order=group_order, palette='husl')
-# sns.countplot(x='Spending_Score', hue='Group', data=df, ax=ax[1][0], hue_order=group_order, palette='husl')
-# sns.countplot(x='Ever_Married', hue='Group', data=df, ax=ax[1][1], hue_order=group_order, palette='husl')
-# sns.countplot(x='Graduated', hue='Group', data=df, ax=ax[1][2], hue_order=group_order, palette='husl')
-# sns.countplot(x='Work_Experience_Range', hue='Group', data=df, ax=ax[2][0], hue_order=group_order, palette='husl')
-# plt.show()
+# sns.countplot(x='Profession', hue='Group', data=df, ax=ax[1][0], hue_order=group_order, palette='husl')
+# sns.countplot(x='Spending_Score', hue='Group', data=df, ax=ax[1][1], hue_order=group_order, palette='husl')
+# sns.countplot(x='Ever_Married', hue='Group', data=df, ax=ax[2][0], hue_order=group_order, palette='husl')
+# sns.countplot(x='Graduated', hue='Group', data=df, ax=ax[2][1], hue_order=group_order, palette='husl')
+# sns.countplot(x='Work_Experience_Range', hue='Group', data=df, ax=ax[3][0], hue_order=group_order, palette='husl')
+# sns.countplot(x='Family_Size_Range', hue='Group', data=df, ax=ax[3][1], hue_order=group_order, palette='husl')
+# sns.countplot(x='Shop_Meat_Range', hue='Group', data=df, ax=ax[4][0], hue_order=group_order, palette='husl')
+# sns.countplot(x='Shop_Dairy_Range', hue='Group', data=df, ax=ax[4][1], hue_order=group_order, palette='husl')
+# sns.countplot(x='Shop_Other_Range', hue='Group', data=df, ax=ax[5][0], hue_order=group_order, palette='husl')
+# sns.countplot(x='Shop_Household_Range', hue='Group', data=df, ax=ax[5][1], hue_order=group_order, palette='husl')
+# plt.show()	
 
 ####################### CORR ####################### 
 # corr = df.corr()
-# print(corr)
 # fig, ax = plt.subplots(1, figsize=(25,25))
 # sns.heatmap(corr, annot=True, fmt=',.2f')
 # plt.title('Correlation Map', fontsize=20)
-
-# mask = np.triu(np.ones_like(corr, dtype=bool))
-# f, ax = plt.subplots(figsize=(8,6))
-# cmap = sns.diverging_palette(200,10,as_cmap=True)
-# sns.heatmap(corr, annot=True, mask=mask, cmap=cmap, center=0, square=True, linewidths=5)
 # plt.show()
+
+
+ax1 = df.groupby(['Ever_Married'])['Age_Range'].value_counts().unstack()
+ax2 = df.groupby(['Age_Range'])['Profession'].value_counts().unstack()
+ax3 = df.groupby(['Ever_Married'])['Spending_Score'].value_counts().unstack()
+ax4 = df.groupby(['Age_Range'])['Spending_Score'].value_counts().unstack()
+ax5 = df.groupby(['Profession'])['Spending_Score'].value_counts().unstack()
+ax6 = df.groupby(['Profession'])['Gender'].value_counts().unstack()
+
+#count plot
+fig, ax = plt.subplots(3,2)
+ax1.plot(kind='bar',ax=ax[0][0],figsize = (15,4))
+ax[0][0].set_title(str(ax1))
+
+ax2.plot(kind='bar',ax=ax[0][1],figsize = (15,4))
+ax[0][1].set_title(str(ax2))
+
+ax3.plot(kind='bar',ax=ax[1][0],figsize = (15,4))
+ax[1][0].set_title(str(ax3))
+
+ax4.plot(kind='bar',ax=ax[1][1],figsize = (15,4))
+ax[1][1].set_title(str(ax4))
+
+ax5.plot(kind='bar',ax=ax[2][0],figsize = (15,4))
+ax[2][0].set_title(str(ax5))
+
+ax6.plot(kind='bar',ax=ax[2][1],figsize = (15,4))
+ax[2][1].set_title(str(ax6))
+plt.show()
+
+
+# ax2 = df.pivot_table(columns='Gender',index='Segmentation',values='ID',aggfunc='count')
+# ax2 = ax2.div(ax2.sum(axis=1), axis = 0).round(2)
+
+# #count plot
+# fig, ax = plt.subplots(1,2)
+# ax1.plot(kind='bar',ax = ax[0],figsize = (15,4))
+# ax[0].set_xticklabels(labels = ['A','B','C','D'],rotation = 0)
+# ax[0].set_title(str(ax1))
+
+# #stacked bars
+# ax2.plot(kind='bar',stacked = True,ax = ax[1],figsize = (15,4))
+# ax[1].set_xticklabels(labels = ['A','B','C','D'],rotation = 0)
+# ax[1].set_title(str(ax2))
+# plt.show()
+
