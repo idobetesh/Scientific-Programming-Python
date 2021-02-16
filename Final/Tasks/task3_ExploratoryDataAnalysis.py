@@ -104,6 +104,7 @@ df = pd.read_csv('../Data/clean_customers2.csv')
 
 
 
+
 # ax1 = df.groupby(['Ever_Married'])['Age_Range'].value_counts().unstack()
 # ax2 = df.groupby(['Age_Range'])['Profession'].value_counts().unstack()
 # ax3 = df.groupby(['Ever_Married'])['Spending_Score'].value_counts().unstack()

@@ -8,6 +8,7 @@ from sklearn.model_selection import train_test_split
 
 # df = pd.read_csv('../Data/customers2.csv')
 df = pd.read_csv('../Data/avg_new.csv')
+df['Avg_Shop'] = (df['Shop_Other'] + df['Shop_Dairy'] + df['Shop_Household'] + df['Shop_Meat']) / 4
 
 # ax1 = sns.scatterplot(data=df, x='Avg_Shop',y='Age', hue='Group')
 # ax2 = sns.scatterplot(data=df, x='Shop_Household',y='Work_Experience', hue='Group')
@@ -27,7 +28,11 @@ df = pd.read_csv('../Data/avg_new.csv')
 # vars=['Age','Family_Size','Work_Experience','Shop_Day'])
 # ax5.savefig('../Data/ax5.pdf')
 
-g = sns.catplot(x="Avg_Shop_Range", y="Age", hue="Group", hue_order=['A','B','C','D'], data=df, kind="violin")
+# g = sns.catplot(x="Avg_Shop_Range", y="Age", hue="Group", hue_order=['A','B','C','D'], data=df, kind="violin")
+# g.savefig('../Attachments/Avg_Shop_Range-Age-Catplot.pdf')
 
-g.savefig('../Attachments/Avg_Shop_Range-Age-Catplot.pdf')
+
+g = sns.scatterplot(data=df, x='Avg_Shop',y='Age', hue='Group',
+      hue_order=['A','B','C','D']) #attached within the submission zip
 plt.show()
+g.figure.savefig('../Attachments/Age-Avg_Shop-Scatterplot.pdf')
