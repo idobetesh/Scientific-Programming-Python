@@ -1,4 +1,4 @@
-# Consumer Behavior - Analysis and Predictions 📈
+# Consumer Behavior - Analysis and Classifications 📈
 ## pip install: 
 `$ pip install numpy`</br>
 `$ pip install pandas`</br>
