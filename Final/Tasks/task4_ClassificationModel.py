@@ -2,9 +2,13 @@ import numpy as np
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
-from sklearn import metrics
+import sklearn as skl
 from sklearn.naive_bayes import GaussianNB
-from sklearn.model_selection import train_test_split
+from sklearn.tree import DecisionTreeClassifier # Import Decision Tree Classifier
+from sklearn.model_selection import train_test_split # Import train_test_split function
+from sklearn import metrics #Import scikit-learn metrics module for accuracy calculation
+# import pydotplus
+
 
 # df = pd.read_csv('../Data/customers2.csv')
 df = pd.read_csv('../Data/avg_new.csv')
@@ -31,8 +35,18 @@ df['Avg_Shop'] = (df['Shop_Other'] + df['Shop_Dairy'] + df['Shop_Household'] + d
 # g = sns.catplot(x="Avg_Shop_Range", y="Age", hue="Group", hue_order=['A','B','C','D'], data=df, kind="violin")
 # g.savefig('../Attachments/Avg_Shop_Range-Age-Catplot.pdf')
 
+X_customers = df[['Age','Family_Size','Shop_Day','Shop_Other','Shop_Dairy','Shop_Household','Shop_Meat']].copy()
+print(X_customers)
+y_customers = df['Group']
+print(y_customers)
 
-g = sns.scatterplot(data=df, x='Avg_Shop',y='Age', hue='Group',
-      hue_order=['A','B','C','D']) #attached within the submission zip
-plt.show()
-g.figure.savefig('../Attachments/Age-Avg_Shop-Scatterplot.pdf')
+X_train, X_test, y_train, y_test = train_test_split(X_customers,y_customers,train_size=0.8,random_state=1)
+model = GaussianNB()
+model.fit(X_train,y_train)
+y_model = model.predict(X_test)
+y_pred = pd.Series(y_model,name="prediction")
+predicted = pd.concat([X_test.reset_index(),y_test.reset_index(),y_pred],axis=1)
+print(predicted)
+print(f"accuracy_score: {round(metrics.accuracy_score(y_test, y_model)*100, 3)}%")
+
+
