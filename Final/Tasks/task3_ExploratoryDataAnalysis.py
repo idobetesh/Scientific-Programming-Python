@@ -8,7 +8,6 @@ from sklearn.model_selection import train_test_split
 
 df = pd.read_csv('../Data/clean_customers2.csv')
 # df = pd.read_csv('../Data/avg.csv')
-# df = pd.read_csv('./Data/clean_customers2.csv')
 # print(df)
 
 # x_vars=['Shop_Other','Shop_Dairy','Shop_Household','Shop_Meat'], y_vars=['Age', 'Work_Experience'], 
@@ -87,20 +86,23 @@ df = pd.read_csv('../Data/clean_customers2.csv')
 # plt.show()	
 
 ####################### CORR ####################### 
-# df['Avg_Shop_Range'] = np.where(df.Avg_Shop>=15, '15+', np.where(df.Avg_Shop>=5, '5-15', '-5')) # -3,5,15,
-# ax10 = df.groupby(['Avg_Shop_Range'])['Group'].value_counts().unstack()
-# print(ax10)
-# ax10.plot(kind='bar', figsize = (20,35))
+df["Work_Experience_to_Age_Ratio"] = df["Work_Experience"] / df["Age"]
+df['Avg_Shop'] = (df['Shop_Other'] + df['Shop_Dairy'] + df['Shop_Household'] + df['Shop_Meat']) / 4
+df = df.round(3)
+df['Avg_Shop_Range'] = np.where(df.Avg_Shop>=15, '15+', np.where(df.Avg_Shop>=5, '5-15', '-5')) # -3,5,15,
+ax10 = df.groupby(['Avg_Shop_Range'])['Group'].value_counts().unstack()
+print(ax10)
+ax10.plot(kind='bar', figsize = (20,35))
 # plt.show()
 # df.to_csv('../Data/avg_new.csv', index=False)
 
 
 
-# corr = df.corr()
-# fig, ax = plt.subplots(1, figsize=(25,25))
-# sns.heatmap(corr, annot=True, fmt=',.2f')
-# plt.title('Correlation Map', fontsize=20)
-# plt.show()
+corr = df.corr()
+fig, ax = plt.subplots(1, figsize=(25,25))
+sns.heatmap(corr, annot=True, fmt=',.2f')
+plt.title('Correlation Map', fontsize=20)
+plt.show()
 
 
 
@@ -185,6 +187,7 @@ sns.countplot(x='Shop_Meat_Range', hue='Group', data=df, ax=ax[4][0], hue_order=
 sns.countplot(x='Shop_Dairy_Range', hue='Group', data=df, ax=ax[4][1], hue_order=group_order, palette='husl')
 sns.countplot(x='Shop_Other_Range', hue='Group', data=df, ax=ax[5][0], hue_order=group_order, palette='husl')
 sns.countplot(x='Shop_Household_Range', hue='Group', data=df, ax=ax[5][1], hue_order=group_order, palette='husl')
+
 plt.show()
 
 # ax9 = df.groupby(['Shop_Household_Range'])['Profession'].value_counts().unstack()

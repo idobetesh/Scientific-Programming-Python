@@ -12,7 +12,6 @@ from sklearn import metrics #Import scikit-learn metrics module for accuracy cal
 
 df = pd.read_csv('../Data/clean_customers2.csv')
 # df = pd.read_csv('../Data/avg_new.csv')
-df['Avg_Shop'] = (df['Shop_Other'] + df['Shop_Dairy'] + df['Shop_Household'] + df['Shop_Meat']) / 4
 
 # ax1 = sns.scatterplot(data=df, x='Avg_Shop',y='Age', hue='Group')
 # ax2 = sns.scatterplot(data=df, x='Shop_Household',y='Work_Experience', hue='Group')
@@ -35,9 +34,28 @@ df['Avg_Shop'] = (df['Shop_Other'] + df['Shop_Dairy'] + df['Shop_Household'] + d
 # g = sns.catplot(x="Avg_Shop_Range", y="Age", hue="Group", hue_order=['A','B','C','D'], data=df, kind="violin")
 # g.savefig('../Attachments/Avg_Shop_Range-Age-Catplot.pdf')
 
+############################ GNB simple example ############################
+X_customers = df[['Age','Shop_Other','Shop_Dairy','Shop_Household','Shop_Meat','Family_Size']].copy()
+print(X_customers)
+y_customers = df['Group']
+
+X_train, X_test, y_train, y_test = train_test_split(X_customers,y_customers,train_size=0.7,random_state=1)
+
+model = GaussianNB()
+model.fit(X_train,y_train)
+
+y_model = model.predict(X_test)
+y_pred = pd.Series(y_model,name="prediction")
+predicted = pd.concat([X_test.reset_index(),y_test.reset_index(),y_pred],axis=1)
+print(predicted)
+print(f"accuracy_score: {round(metrics.accuracy_score(y_test, y_model)*100, 3)}%")
+
+############################ end example ############################
 
 
-def bayes_plot(df,model="gnb",spread=30):
+
+
+def bayes_plot(df,model="gnb",spread=80):
     df.dropna()
     colors = 'seismic'
     col1 = df.columns[0]
@@ -88,18 +106,6 @@ def bayes_plot(df,model="gnb",spread=30):
     fig.set_size_inches(12, 8)
     plt.show()
 
-X_customers = df[['Age','Shop_Other','Shop_Dairy','Shop_Household','Shop_Meat','Family_Size']].copy()
-print(X_customers)
-y_customers = df['Group']
-
-X_train, X_test, y_train, y_test = train_test_split(X_customers,y_customers,train_size=0.8,random_state=1)
-model = GaussianNB()
-model.fit(X_train,y_train)
-y_model = model.predict(X_test)
-y_pred = pd.Series(y_model,name="prediction")
-predicted = pd.concat([X_test.reset_index(),y_test.reset_index(),y_pred],axis=1)
-print(predicted)
-print(f"accuracy_score: {round(metrics.accuracy_score(y_test, y_model)*100, 3)}%")
 
 
 print(y_customers)
