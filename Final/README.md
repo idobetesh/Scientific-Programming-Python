@@ -5,3 +5,5 @@
 `$ pip install sklearn`</br>
 `$ pip install seaborn`</br>
 `$ pip install matplotlib`</br>
+`$ pip install pydotplus`</br>
+`$ conda install -y python-graphviz`</br>
