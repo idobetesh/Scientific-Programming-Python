@@ -112,3 +112,154 @@ print(y_customers)
 # X_customers2 = df[['Age','Shop_Other']].copy()
 X_customers2 = df[['Age','Shop_Other']].copy()
 bayes_plot(pd.concat([X_customers2,y_customers],axis=1),spread = 1)
+
+
+
+
+
+
+
+
+
+def show_decision_tree_report_and_pie(X, y):
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2,random_state=1)  # 80% training and 20% test
+    clf = DecisionTreeClassifier()
+    clf.fit(X_train,y_train)
+
+    result = permutation_importance(clf,X,y,n_repeats=10,random_state=0)
+    importance = zip(result['importances_mean'], X.columns)
+
+    features = []
+    values = []
+    print('Features Importance:')
+    for v,i in sorted(importance, reverse=True): # descending order
+        features.append(i)
+        values.append(v)
+        print(f'Feature: %s scores: %.5f' % (i,v))
+
+
+    # pie chart
+    pie = plt.pie(values, labels=features, autopct='%1.1f%%', startangle=90)
+    plt.rcParams['figure.figsize'] = [15, 12]
+    plt.show()
+
+    y_pred = clf.predict(X_test)
+    print(metrics.classification_report(y_test, y_pred))
+    return clf, X
+
+
+##### a. Baseline Decision Tree<br>Baseline Decision Tree classification report for the dataset, trained using the original data while dropping NA values
+
+
+fresh_df = pd.read_csv('customers2.csv')
+fresh_df.dropna(inplace=True)
+categorical_to_drop = ['ID','Gender','Ever_Married','Graduated','Profession','Spending_Score','Group']
+fresh_X = fresh_df.drop(categorical_to_drop,axis=1)
+fresh_y = fresh_df['Group']
+
+clf, X = show_decision_tree_report_and_pie(fresh_X, fresh_y)
+
+###############################################################################
+
+dot_data = StringIO()
+export_graphviz(clf,out_file=dot_data,filled=True,rounded=True,
+                feature_names=X.columns,class_names=clf.classes_)
+
+# graph=pydotplus.graph_from_dot_data(dot_data.getvalue())
+# graph.write_png('Customers - Baseline_DecisionTreeClassifier.png') # attached within the submission zip
+# Image(graph.create_png())
+
+##############################################################################
+
+##### b. Decision Tree Classifier based on manipulated data set
+- Select the most relevant features. 
+- Final decision tree classification report and model visualization.
+- Is there any improvement in the performance 
+
+##############################################################################
+
+categorical_to_drop = ['Gender','Ever_Married','Graduated','Profession','Spending_Score','Group',
+                       'Family_Size_Range','Work_Experience_Range','Shop_Other_Range','Shop_Dairy_Range',
+                       'Shop_Household_Range','Shop_Meat_Range','Avg_Shop_Range','Age_Range','Group_Level']
+
+customers_X = df.drop(categorical_to_drop,axis=1).copy()
+customers_X.info()
+
+customers_y = df['Group']
+clf, X = show_decision_tree_report_and_pie(customers_X, customers_y)
+
+#############################################################################
+
+#### We can see an improvement in the model accuracy from 0.67 to 0.7
+
+##########################################################################
+
+dot_data = StringIO()
+export_graphviz(clf,out_file=dot_data,filled=True,rounded=True,
+                feature_names=X.columns,class_names=clf.classes_)
+
+# graph=pydotplus.graph_from_dot_data(dot_data.getvalue())
+# graph.write_png('Customers - manipulated_DecisionTreeClassifier.png') # attached within the submission zip
+# Image(graph.create_png())
+
+##############################################################################
+
+X_customers2 = df[['Shop_Other','Avg_Shop']].copy()
+clf, X = show_decision_tree_report_and_pie(X_customers2, customers_y)
+
+############################################################################
+
+##### Let's try to limit the tree's depth to 4
+
+##########################################################################
+
+X_train, X_test, y_train, y_test = train_test_split(customers_X,customers_y,train_size=0.8,random_state=1)
+
+clf = DecisionTreeClassifier(max_depth=4)
+clf.fit(X_train,y_train)
+
+y_pred = clf.predict(X_test)
+print(metrics.classification_report(y_test, y_pred))
+
+dot_data = StringIO()
+export_graphviz(clf,out_file=dot_data,filled=True,rounded=True,
+                feature_names=customers_X.columns,class_names=clf.classes_)
+
+# graph=pydotplus.graph_from_dot_data(dot_data.getvalue())
+# graph.write_png('Customers - DecisionTreeClassifier by Two Best Features max_depth=4.png') # attached within the submission zip
+# Image(graph.create_png())
+
+##############################################################################
+
+##### Now, let's try to limit the tree's depth to 4 and change the criterion to entropy instead of the default gini
+
+##########################################################################
+
+X_train, X_test, y_train, y_test = train_test_split(customers_X,customers_y,train_size=0.8,random_state=1)
+
+clf = DecisionTreeClassifier(max_depth=4,criterion='entropy')
+clf.fit(X_train,y_train)
+
+y_pred = clf.predict(X_test)
+print(metrics.classification_report(y_test, y_pred))
+
+dot_data = StringIO()
+export_graphviz(clf,out_file=dot_data,filled=True,rounded=True,
+                feature_names=customers_X.columns,class_names=clf.classes_)
+
+# graph=pydotplus.graph_from_dot_data(dot_data.getvalue())
+# graph.write_png('Customers - DecisionTreeClassifier by Two Best Features max_depth=4 criterion=entropy.png') # attached within the submission zip
+# Image(graph.create_png())
+
+##########################################################################
+
+#### Results Overview
+As we can see, the model did better where data is clean and even better than that where its depth was limited to 4.
+When I tried to plot the model using the best two features according to the features importance list I got less accurate results.
+
+#### Issues
+Through this exercise, I have encountered some issues I needed to overcome such as finding the best feature (in my case create it with a new avg column), clean the data over and over again and lot's of 'connection failed' Jupiter errors.
+
+#### Insights from the Analysis
+I found the best feature for classified my data set into groups was the one I added that holds the average of all kinds of shops, also I found I was wrong in most of my initial thoughts about the data set.
+
